@@ -1,0 +1,1 @@
+(se a estrutura por funcionalidade não cobrir totalmente as rotas)

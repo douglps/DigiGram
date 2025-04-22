@@ -1,0 +1,58 @@
+@import "../abstracts/variables";
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+#logo {
+  width: 5rem;
+  height: 5rem;
+  z-index: -1;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+
+  &__container-text {
+    padding: 1.2rem;
+  }
+
+  &__container {
+    border-radius: 1rem;
+    display: flex;
+    background-color: $cor-azul-primaria-transparente;
+    width: 99%;
+    font-size: 1.3rem;
+    box-shadow: 0.5rem 0.5rem 2rem 0.1rem #fffdfd1c;
+
+    &--highlight {
+      display: flexbox;
+      font-weight: 600;
+      text-shadow: 1px 1px 2px #a7a7a7, 0 0 1em #474412, 0 0 0.2em #121212;
+      font-variant: small-caps;
+      font-size: 1.6rem;
+    }
+
+    &--img img {
+      margin: 0.5rem;
+      width: 7rem;
+      height: 7rem;
+      border-radius: 5%;
+      box-shadow: 0.2rem 0.2rem 1rem 0.2rem #fffdfd1c;
+    }
+  }
+}
+
+#me {
+  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
+  font-family: "Arizonia", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  padding: 2rem;
+}
+
+#dev {
+  font-family: "Genos", monospace;
+  font-size: 1.8rem;
+  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
+  padding: 2rem;
+}

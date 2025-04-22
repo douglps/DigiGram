@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/**
+ * Tipografía básica do projeto.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  min-width: 320px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  will-change: filter;
+  transition: filter 1600ms;
+  align-items: center;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(360deg);
+}
+
+.cabecalho {
+  font-family: "Anton SC";
+  display: inline-flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  padding: 0 1rem;
+}
+.cabecalho__logo {
+  font-size: 1.8rem;
+  font-weight: 100;
+  color: #646cff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu-up {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  align-items: center;
+}
+
+.menu-up li {
+  font-family: "Antonio", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+a {
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #979be7;
+}
+
+.cabecalho__logo {
+  color: #ffe964;
+}
+
+#logo {
+  width: 5rem;
+  height: 5rem;
+  z-index: -1;
+}
+
+.hero__container {
+  border-radius: 1rem;
+  display: flex;
+  background-color: rgba(0, 1, 13, 0.231372549);
+  width: 98%;
+  font-size: 1.3rem;
+}
+.hero__container--highlight {
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #a7a7a7, 0 0 1em #6d681e, 0 0 0.2em #121212;
+  font-variant: small-caps;
+  font-size: 1.6rem;
+}
+
+#me {
+  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
+  font-family: "Arizonia", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 2rem;
+}
+
+#dev {
+  font-family: "Genos", monospace;
+  font-size: 1.8rem;
+  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
+  padding: 2rem;
+}
+
+/*# sourceMappingURL=style.comp.css.map */

@@ -1,0 +1,21 @@
+@use "../abstracts";
+/**
+ * Tipografía básica do projeto.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap");
+
+a {
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #979be7;
+}
+
+.cabecalho__logo {
+  color: #ffe964;
+  letter-spacing: 0.2rem;
+}
