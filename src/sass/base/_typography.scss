@@ -1,21 +1,31 @@
 @use "../abstracts";
+@import "../abstracts/_variables.scss";
 /**
  * Tipografía básica do projeto.
  */
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap");
 
 a {
-  color: #646cff;
-  text-decoration: inherit;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #00f0e7;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.6rem;
+  transition: all 0.2s ease-in-out;
 }
 a:hover {
-  color: #979be7;
+  color: #bafffd;
+  text-decoration-color: $cor-verde-primaria;
+  text-decoration-thickness: 0.3rem;
+  text-underline-offset: 0.6rem;
+}
+
+a:active {
+  color: $cor-verde-primaria;
 }
 
 .cabecalho__logo {
-  color: #ffe964;
+  font-family: "Satisfy", Arial, Helvetica, sans-serif;
+  color: #00f0e7;
   letter-spacing: 0.2rem;
+  font-size: 3.2rem;
 }

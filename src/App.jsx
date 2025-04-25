@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Cabecalho } from "./components/Cabecalho";
-import { Hero } from "./components/hero";
+import { Hero } from "./components/Hero";
 import "./styles/style.css";
 
 function App() {

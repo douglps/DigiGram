@@ -1,0 +1,195 @@
+@use "../abstracts";
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-image: linear-gradient(
+    45deg,
+    rgb(12 20 27 / 50%) 60%,
+    #11393b 85%,
+    #1c473996 92%
+  );
+  background-size: contain;
+  // background-position: center;
+  background-repeat: no-repeat;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  min-width: 320px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  will-change: filter;
+  transition: filter 1600ms;
+  align-items: center;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(360deg);
+}
+
+// -----------------------------------------------------------------------------
+// ****FLEXBOX****
+.faixa {
+  @include caixa-flex--center--b;
+  @include fundo-transparente--br;
+  height: 1.4rem;
+  width: 100dvw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  margin-left: auto;
+}
+
+.caixa {
+  @include caixa-flex--center;
+  gap: 1rem;
+}
+
+.cabecalho {
+  @include fundo-transparente--br;
+  @include fonte_menu;
+  width: 100%;
+  top: 1.4rem;
+  right: 0;
+  position: fixed;
+  display: flex;
+  margin-left: auto;
+  width: 99%;
+  height: auto;
+  border-radius: 5rem 0 0 5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+  z-index: 100;
+
+  &__logo {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    margin-right: 1rem;
+  }
+}
+
+.botao {
+  @include botao-classico--br;
+}
+
+.nav {
+  display: flex;
+  height: 7rem;
+  align-self: center;
+}
+
+.menu {
+  @include fundo-transparente--pr;
+  @include caixa-flex--center;
+  border-radius: 5rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1rem 0;
+
+  &-up {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    align-items: center;
+
+    &--botoes {
+      margin: 0 1rem;
+    }
+  }
+}
+
+.menu-up li {
+  font-family: "Antonio", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+// ****IMAGENS****
+
+.skills-icon__container {
+  @include caixa-flex--center--b;
+
+  &skils-icon {
+    width: 5rem;
+    height: 5rem;
+    overlay: auto;
+    // filter: hue-rotate(160deg) saturate(78%) brightness(1.2);
+  }
+}
+.menu-up--botoes {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 15rem;
+  border-color: #121212, #888888;
+  border-style: solid;
+  border-width: 0.1rem;
+  padding: 0.8rem 0.8rem;
+  transition-duration: 0.4s;
+  &:hover {
+    background-color: #92ff2bbe;
+    color: #121212;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

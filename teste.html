@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transição de Cores Tecnológica</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #0d0d0d;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px;
+        justify-content: center;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, #00f0ff, #0000ff);
+        animation: techColorShift 4s infinite linear;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #00ffff80;
+        transition: transform 0.3s ease;
+      }
+
+      .box:hover {
+        transform: scale(1.1);
+      }
+
+      @keyframes techColorShift {
+        0% {
+          background: linear-gradient(135deg, #00f0ff, #0000ff);
+          box-shadow: 0 0 10px #00ffff80;
+        }
+        25% {
+          background: linear-gradient(135deg, #00ff9d, #0080ff);
+          box-shadow: 0 0 15px #00ffd980;
+        }
+        50% {
+          background: linear-gradient(135deg, #00ffaa, #0055ff);
+          box-shadow: 0 0 20px #00ffee80;
+        }
+        75% {
+          background: linear-gradient(135deg, #00ffc3, #0022ff);
+          box-shadow: 0 0 15px #00ffe080;
+        }
+        100% {
+          background: linear-gradient(135deg, #00f0ff, #0000ff);
+          box-shadow: 0 0 10px #00ffff80;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+@import "../abstracts/mixins";
+
+.faixa {
+  @include caixa-flex--center--b;
+  @include fundo-transparente--br;
+  height: 4rem;
+  width: 100dvw;
+}

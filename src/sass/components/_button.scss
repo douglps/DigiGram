@@ -1,3 +1,81 @@
+@import "../abstracts/_variables.scss";
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.botoes {
+  background-color: #00f050;
+  color: black;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3rem;
+  transition: 0.15s ease-in-out;
+  border: 0.2rem solid #fffbfb69;
+  padding: 1rem 2.5rem;
+  //   text-align: center;
+  align-self: center;
+  user-select: none; // Impede a seleção de texto ao clicar
+  text-transform: uppercase;
+  font-size: 1.4rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #00f050;
+    box-shadow: 0.2rem 0.5rem 1rem 0.2rem rgba(rgba(0, 0, 0, 0.295), 0.3) !important; // Adiciona um contorno de foco acessível
+    transform: translate(-0.1rem, -0.1rem); // Um leve deslocamento para cima
+  }
+
+  &:active {
+    background: linear-gradient(#00f050, rgb(1, 128, 17));
+    transform: translate(0rem, 0.1rem);
+    box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(rgba(0, 0, 0, 0.966), 0.5) !important;
+    transition: 0.01s ease-in-out;
+  }
+
+  &:focus {
+    outline: none; // Remove o contorno padrão em alguns navegadores
+    box-shadow: 0rem 0.5rem 0.5rem 0.1rem rgba(rgba(0, 0, 0, 0.562), 0.3); // Adiciona um contorno de foco acessível
+  }
+
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed; // Indica que não é clicável
+    opacity: 0.6; // Torna o botão semi-transparente
+  }
+}
+.cabecalho--botoes {
+  border-width: 0;
+  padding: 0 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  user-select: none; // Impede a seleção de texto ao clicar
+  margin: 1.5rem 1rem 1rem 0;
+  background-color: $preta;
+  border-radius: 50%;
+  padding: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #000000;
+    box-shadow: 0.2rem 0.5rem 1rem 0.2rem rgba(rgba(0, 0, 0, 0.295), 0.3) !important; // Adiciona um contorno de foco acessível
+    transform: translate(-0.1rem, -0.1rem); // Um leve deslocamento para cima
+  }
+
+  &:active {
+    background: linear-gradient(#00f050, rgb(1, 128, 17));
+    transform: translate(0rem, 0.1rem);
+    box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(rgba(0, 0, 0, 0.966), 0.5) !important;
+    transition: 0.05s ease-in-out;
+  }
+
+  &:focus {
+    outline: none; // Remove o contorno padrão em alguns navegadores
+    box-shadow: 0rem 0.5rem 0.5rem 0.1rem rgba(rgba(0, 0, 0, 0.562), 0.3); // Adiciona um contorno de foco acessível
+  }
+
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed; // Indica que não é clicável
+    opacity: 0.6; // Torna o botão semi-transparente
+  }
+}
