@@ -1,11 +1,26 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@font-face {
+  font-family: "Shmooper";
+  src: url("src/fonts/Shmooper.ttf") format("truetype");
+} // h1
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"); // h2
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap"); // h3
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap"); // menu
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap"); //I Do
+@font-face {
+  font-family: "Kabur";
+  src: url("src/fonts/kabur-kvajp.otf") format("truetype");
+}
+@font-face {
+  font-family: "Hero";
+  src: url("src/fonts/Hero-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Blogger";
+  src: url("src/fonts/BloggerSans-Light-BF675a632080dd7.ttf") format("truetype");
+}
 
 @mixin texto($familia, $tamanho, $peso, $altura) {
   font-family: $familia;
@@ -16,14 +31,21 @@
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: "Kabur", cursive;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  font-weight: 100;
+}
+
+h2 {
+  font-family: "Shmooper ", cursive;
+  font-size: 2.8rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px #a7a7a7, 0 0 1em #5e5913, 0 0 0.2em #121212;
 }
 
 h3 {
-  display: flexbox;
-  font-weight: 600;
-  text-shadow: 1px 1px 2px #a7a7a7, 0 0 1em #5e5913, 0 0 0.2em #121212;
-  font-variant: small-caps;
-  font-size: 1.6rem;
+  font-family: "Cal Sans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
 }

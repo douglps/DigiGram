@@ -1,3 +1,5 @@
+import Typewriter from "./Typewriter";
+
 export function Hero() {
   return (
     <section className="hero">
@@ -5,7 +7,7 @@ export function Hero() {
         <div className="me_container">
           <div id="me">
             <h1>Douglas Lopes</h1>
-            <img src="src/assets/images/img.jpg" alt="" />
+            <img src="src/assets/images/avatar.png" alt="" />
           </div>
           <div id="dev">
             <h2>Desenvolvedor Front-End</h2>
@@ -29,95 +31,6 @@ export function Hero() {
             <span className="hero__container--highlight">
               Continue, e descubra até onde podemos ir.
             </span>
-          </div>
-          <div className="hero__container--skills">
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/sass.svg"
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/html5.svg"
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/react.svg"
-                alt=""
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/python-dark.svg"
-                alt=""
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/javascript.svg"
-                alt=""
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/java-dark.svg"
-                alt=""
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/nodejs.svg"
-                alt=""
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/css.svg"
-                alt=""
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/tailwind.svg"
-                alt=""
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/figma.svg"
-                alt=""
-              />
-            </div>
-            <div className="hero__container--imgbg">
-              <img
-                className="skills-icon"
-                src="src/assets/images/skills/php.svg"
-                alt=""
-              />
-            </div>
-
-            <div className="bar"></div>
-            <div className="meu-icone-exemplo">
-              <img
-                className="elemento-circulo"
-                src="src/assets/images/skills/JavaScript-logo.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <button className="botao">Clique Aqui</button>
-            </div>
           </div>
         </div>
       </div>

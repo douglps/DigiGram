@@ -1,6 +1,27 @@
 // -----------------------------------------------------------------------------
 // KUNG FU SCSS
 
+// SISTEMA DE TAMANHOS
+
+// Fontes - Minor Third - 1.200 em PX
+// 4.4 - 5.4 - 6.4 - 7.7 - 9.2 - 11.1 - 13.3 - 16 - 19.2 - 23 - 27.6 - 33.2 - 39-8 - 47.8 - 57.3 - 68.8 - 82.6
+
+// Espaçamentos - Major Third - 1.2500 - em PX
+// 2.1 - 2.7 - 3.3 - 4.2 - 5.2 - 6.5 - 8.2 - 10.2 - 12.8 - 16 - 20 - 25 - 31.2 - 39 - 48.8 - 61 - 76.3 - 95.4 - 119.2
+
+// MIDIAS QUERYS
+// 320px - 480px: Mobile devices (phones).
+// 481px - 768px: Tablets.
+// 769px - 1024px: Small screens, laptops.
+// 1025px - 1200px: Desktops, larger screens.
+// 1201px and above: Very large screens, TVs. 
+
+// 1. Mobile: 0px - 767px
+// 2. Tablet: 768px - 1023px
+// 3. Desktop: 1024px - 1279px
+// 4. Large Desktop: 1280px - 1535px
+// 5. Extra Large Desktop: 1536px e acima
+
 // MIXINS
 @mixin caixa-flex--center {
   display: flex;

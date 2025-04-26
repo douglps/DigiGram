@@ -1,6 +1,7 @@
 @use "../abstracts";
 @import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
+@import "../base/_helpers.scss";
 
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
@@ -11,24 +12,47 @@
   color: rgba(255, 255, 255, 0.87);
   background-image: linear-gradient(
     45deg,
-    rgb(12 20 27 / 50%) 60%,
+    rgba(12, 20, 27, 0.5) 55%,
     #11393b 85%,
-    #1c473996 92%
+    rgb(19 100 133 / 59%) 91%
   );
-  background-size: contain;
-  // background-position: center;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 * {
+  font-family: "Blogger", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  letter-spacing: 0.3rem;
 }
 
 html {
   font-size: 62.5%;
+
+  @include respond(xxl) {
+    font-size: 68.75%;
+  }
+  @include respond(xl) {
+  }
+
+  @include respond(big) {
+    font-size: 56.25%;
+  }
+
+  @include respond(md) {
+    font-size: 50%;
+  }
+
+  @include respond(sm) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -37,6 +61,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .App {
@@ -61,25 +90,13 @@ body {
   will-change: filter;
   transition: filter 1600ms;
   align-items: center;
-}
 
-.logo:hover {
-  filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(360deg);
+  .logo:hover {
+    filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(360deg);
+  }
 }
-
 // -----------------------------------------------------------------------------
 // ****FLEXBOX****
-.faixa {
-  @include caixa-flex--center--b;
-  @include fundo-transparente--br;
-  height: 1.4rem;
-  width: 100dvw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  margin-left: auto;
-}
 
 .caixa {
   @include caixa-flex--center;
@@ -87,32 +104,120 @@ body {
 }
 
 .cabecalho {
-  @include fundo-transparente--br;
-  @include fonte_menu;
-  width: 100%;
-  top: 1.4rem;
-  right: 0;
   position: fixed;
+  width: 100%;
   display: flex;
-  margin-left: auto;
-  width: 99%;
-  height: auto;
-  border-radius: 5rem 0 0 5rem;
-  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
-  padding: 0 1rem;
-  flex-wrap: wrap;
-  z-index: 100;
+  justify-content: flex;
+  user-select: none;
+  top: 0;
+  left: 0;
+  z-index: 101;
 
-  &__logo {
-    font-weight: 700;
+  .control {
+    position: fixed;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    z-index: 102;
+  }
+
+  .tema {
+    @include controles;
+    top: 0;
+    right: 2.5rem;
+
+    & img {
+      background-color: black;
+      transition: transform 3s ease-in-out;
+      &:hover {
+        transform: rotate(720deg) scale(1.5);
+      }
+      &:active {
+        background-color: $cor-verde-primaria;
+      }
+    }
+  }
+
+  .github {
+    @include controles;
+    top: 0;
+    right: 8.5rem;
+    & img {
+      background-color: black;
+      &:hover {
+        transform: scale(1.5);
+        transition: transform 0.5s ease-in-out;
+        &:active {
+          background-color: $cor-verde-primaria;
+        }
+      }
+    }
+  }
+
+  .chat {
+    @include controles;
+    top: 0;
+    right: 14rem;
+    & img {
+      color: white;
+      background-color: black;
+      &:hover {
+        transform: scale(1.5);
+        transition: transform 0.5s ease-in-out;
+      }
+      &:active {
+        background-color: $cor-verde-primaria;
+      }
+    }
+  }
+
+  .cafe {
+    @include controles;
+    top: 0;
+    right: 20rem;
+    & img {
+      background-color: black;
+      &:hover {
+        transform: scale(1.5);
+        transition: transform 0.5s ease-in-out;
+      }
+      &:active {
+        background-color: $cor-verde-primaria;
+      }
+    }
+  }
+
+  &__logo--img {
+    @include fundo-transparente--pr;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    will-change: filter;
+    transition: filter 1600ms;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0.5rem;
+    z-index: 100;
+
+    &:hover {
+      filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(360deg);
+    }
+  }
+  .navegacao {
+    @include fundo-transparente--br;
+    @include caixa-flex--center;
     height: auto;
-    margin-right: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 0 0 1rem 1rem;
   }
 }
 
@@ -130,18 +235,23 @@ body {
   @include fundo-transparente--pr;
   @include caixa-flex--center;
   border-radius: 5rem;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 1rem 0;
+  padding: 1rem 2rem;
 
   &-up {
+    width: 100%;
+    min-width: 32rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
     display: flex;
     list-style: none;
     gap: 2rem;
-    margin: 0 1rem;
     font-size: 1.8rem;
     align-items: center;
+    & a {
+      font-family: "Antonio", Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 2rem;
+    }
 
     &--botoes {
       margin: 0 1rem;
@@ -149,9 +259,24 @@ body {
   }
 }
 
-.menu-up li {
-  font-family: "Antonio", Arial, Helvetica, sans-serif;
-  font-weight: 400;
+// digitador
+.digitador {
+  font-family: "Hero";
+  font-size: 2rem;
+  font-weight: 600;
+  color: $cor-verde-primaria;
+}
+
+.blinking-cursor {
+  font-family: "Hero";
+  font-size: 2.5rem;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 // ****IMAGENS****

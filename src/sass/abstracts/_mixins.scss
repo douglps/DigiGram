@@ -32,7 +32,7 @@
 }
 
 @mixin fundo-transparente--br {
-  box-shadow: inset 0rem 0rem 0rem 30rem rgba(207, 207, 207, 0.06);
+  box-shadow: inset 0rem 0rem 0rem 40rem rgba(207, 207, 207, 0.06);
   border: none;
   backdrop-filter: blur(1.5rem);
 }
@@ -127,8 +127,24 @@
 }
 
 // ***********************************************************************
-// FONTES
+// EXTENDS
 
-@mixin fonte_menu {
-  font-family: "Anton SC";
+@mixin controles {
+  @include fundo-transparente--pr;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 50% 50%;
+  width: 5rem;
+  height: 5rem;
+  flex-direction: row-reverse;
+  z-index: 102;
+  cursor: pointer;
+
+  & img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
 }
