@@ -1,6 +1,6 @@
 export function Skills() {
   return (
-    <section className="skills">
+    <section className="skills" id="Skills">
       <div className="skills__container">
         <div className="skills__container--imgbg">
           <img

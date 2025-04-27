@@ -31,6 +31,7 @@
   padding: 0;
   line-height: 1.6;
   letter-spacing: 0.3rem;
+  z-index: 10;
 }
 
 html {
@@ -53,6 +54,8 @@ html {
   @include respond(sm) {
     font-size: 50%;
   }
+
+  user-select: none;
 }
 
 body {
@@ -158,12 +161,11 @@ img {
     }
   }
 
-  .chat {
+  .cafe {
     @include controles;
     top: 0;
     right: 14rem;
     & img {
-      color: white;
       background-color: black;
       &:hover {
         transform: scale(1.5);
@@ -174,12 +176,12 @@ img {
       }
     }
   }
-
-  .cafe {
+  .chat {
     @include controles;
     top: 0;
     right: 20rem;
     & img {
+      color: white;
       background-color: black;
       &:hover {
         transform: scale(1.5);
@@ -222,7 +224,7 @@ img {
 }
 
 .botao {
-  @include botao-classico--br;
+  @include botao-classico--vd;
 }
 
 .nav {

@@ -7,7 +7,7 @@ export function Cabecalho() {
             src="src\assets\images\logo_bgoff.png"
             id="logo"
             alt="logo"
-            title="DiGiGram"
+            title="DigiGram (Douglas Lopes - Dev />)"
           />
         </div>
         <div className="menu">
@@ -17,16 +17,16 @@ export function Cabecalho() {
                 <a href="#home">Home</a>
               </li>
               <li>
-                <a href="#Sobre Mim">Sobre Mim</a>
+                <a href="#SobreMim">Sobre Mim</a>
               </li>
               <li>
-                <a href="#Portifólio">Portifólio</a>
+                <a href="#Portifolio">Portifólio</a>
               </li>
               <li>
                 <a href="#LAB">LAB</a>
               </li>
               <li>
-                <a href="#contato">Contato</a>
+                <a href="#Contato">Contato</a>
               </li>
             </ul>
           </nav>
@@ -44,23 +44,23 @@ export function Cabecalho() {
         </div>
         <div className="github">
           <img
-            src="src/assets/images/skills/github-br.svg"
+            src="src/assets/images/socials/github-br.svg"
             alt="GitHub Douglps"
             title="GitHub Douglps"
           />
         </div>
-        <div className="chat">
-          <img
-            src="src/assets/images/skills/chat.svg"
-            alt="Vamos Conversar"
-            title="Vamos Conversar"
-          />
-        </div>
         <div className="cafe">
           <img
-            src="src/assets/images/skills/coffeebr.svg"
+            src="src/assets/images/coffeebr.svg"
             alt="Me pague um café"
             title="Me pague um café"
+          />
+        </div>
+        <div className="chat">
+          <img
+            src="src/assets/images/socials/chat.svg"
+            alt="Vamos Conversar"
+            title="Vamos Conversar"
           />
         </div>
       </div>

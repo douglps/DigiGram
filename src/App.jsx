@@ -6,25 +6,22 @@ import { Portfolio } from "./components/Portfolio";
 import { Skills } from "./components/Skills";
 import "./styles/style.css";
 import { Terminal } from "./components/Terminal";
+import { Footer } from "./layouts/Footer";
 
 function App() {
   useState();
-  const frases = [
-    "Olá, mundo!",
-    "Sou um desenvolvedor React.",
-    "Vamos codar com estilo!",
-    "JavaScript é vida!",
-  ];
   return (
     <div className="App">
       <Cabecalho />
       <Hero />
       <Terminal />
-      <div>bloco notas com JS simulando escrita</div>
       <div>lazing page</div>
       <Skills />
       <ElevatorPitch />
+      {/* Sessão “Processo de Trabalho” */}
       <Portfolio />
+      {/* Sessão “Depoimentos” //“Resumo Profissional” em PDF. */}
+      <Footer />
     </div>
   );
 }

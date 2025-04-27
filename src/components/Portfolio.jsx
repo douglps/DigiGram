@@ -1,7 +1,7 @@
 export function Portfolio() {
   return (
-    <section className="portfolio">
-      <div className="grid grid--portfolio">
+    <section className="portfolio" id="Portifolio">
+      <div className="grid grid--portfolio" id="portfolio">
         <div className="portfolio--img">
           <a href="">
             <img src="src/assets/images/img.jpg" alt="" />

@@ -11,15 +11,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap"); //I Do
 @font-face {
   font-family: "Kabur";
-  src: url("src/fonts/kabur-kvajp.otf") format("truetype");
+  src: url("src/fonts/kabur-kvajp.otf") format("opentype");
 }
 @font-face {
   font-family: "Hero";
-  src: url("src/fonts/Hero-Regular.otf") format("truetype");
+  src: url("src/fonts/Hero-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Blogger";
   src: url("src/fonts/BloggerSans-Light-BF675a632080dd7.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Blenda";
+  src: url("src/fonts/Blenda Script.otf") format("opentype");
 }
 
 @mixin texto($familia, $tamanho, $peso, $altura) {
