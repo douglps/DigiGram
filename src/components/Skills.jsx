@@ -41,69 +41,68 @@ export function Skills() {
           FERRAMENTAS
         </div>
       </div>
-      {openDiv === 1 && (
-        <div className="abas-more">
-          <p>
-            Aqui reside a inteligência e a estrutura que opera nos bastidores. É
-            o motor que processa dados, gerencia informações e garante que tudo
-            funcione de forma segura e confiável. A essência de todo o
-            funcionamento de qualquer aplicação está no Back-End.{" "}
-          </p>
-          <div className="citacao">
-            "A arte de programar consiste em organizar e dominar a
-            complexidade."
-            <br /> -Edsger W. Dijkstra
-          </div>
+      <div
+        className={`abas-more collapsible ${openDiv === 1 ? "is-open" : ""}`}
+      >
+        <p>
+          Aqui reside a inteligência e a estrutura que opera nos bastidores. É o
+          motor que processa dados, gerencia informações e garante que tudo
+          funcione de forma segura e confiável. A essência de todo o
+          funcionamento de qualquer aplicação está no Back-End.{" "}
+        </p>
+        <div className="citacao">
+          "A arte de programar consiste em organizar e dominar a complexidade."
+          <br /> -Edsger W. Dijkstra
         </div>
-      )}
-      {openDiv === 2 && (
-        <div className="abas-more">
-          <p>
-            É a camada que ganha vida nos navegadores, a interface onde todos
-            usuários, assim como você neste momento, se conectam diretamente com
-            o conteúdo. O Front-End é incrivelmente a vitrine, o ambiente e o
-            elo de toda a interação do site com o utilizador.
-          </p>
-          <div className="citacao">
-            "Você nunca terá uma segunda chance de causar uma primeira impressão
-            forte."
-            <br />- Will Rogers
-          </div>
+      </div>
+      <div
+        className={`abas-more collapsible ${openDiv === 2 ? "is-open" : ""}`}
+      >
+        <p>
+          É a camada que ganha vida nos navegadores, a interface onde todos
+          usuários, assim como você neste momento, se conectam diretamente com o
+          conteúdo. O Front-End é incrivelmente a vitrine, o ambiente e o elo de
+          toda a interação do site com o utilizador.
+        </p>
+        <div className="citacao">
+          "Você nunca terá uma segunda chance de causar uma primeira impressão
+          forte."
+          <br />- Will Rogers
         </div>
-      )}
-      {openDiv === 3 && (
-        <div className="abas-more">
-          <p>
-            Da prancheta digital à implementação final, esta área é sobre a
-            harmonia entre estética, usabilidade e a identidade da sua marca. a
-            UI (<i>User Interface</i>) e a UX (<i>User Experience</i>)
-            sintetizam a percepção do usuário no front-end junto ao inteligência
-            do back-end para proporcionar experiências agradáveis.
-          </p>
-          <div className="citacao">
-            "Design não é apenas o que parece e o que se sente. Design é como
-            funciona."
-            <br />
-            -Steve Jobs
-          </div>
+      </div>
+      <div
+        className={`abas-more collapsible ${openDiv === 3 ? "is-open" : ""}`}
+      >
+        <p>
+          Da prancheta digital à implementação final, esta área é sobre a
+          harmonia entre estética, usabilidade e a identidade da sua marca. a UI
+          (<i>User Interface</i>) e a UX (<i>User Experience</i>) sintetizam a
+          percepção do usuário no front-end junto ao inteligência do back-end
+          para proporcionar experiências agradáveis.
+        </p>
+        <div className="citacao">
+          "Design não é apenas o que parece e o que se sente. Design é como
+          funciona."
+          <br />
+          -Steve Jobs
         </div>
-      )}
-      {openDiv === 4 && (
-        <div className="abas-more">
-          <p>
-            Construir projetos digitais exige mais do que apenas linguagens de
-            programação. O uso estratégico destas ferramentas não é opcional;
-            são requisitos fundamentais que garantem a construção sólida, a
-            manutenção eficiente, o controle e a organização impecável dos
-            projetos desde o primeiro clique até a entrega e além.
-          </p>
-          <div className="citacao">
-            "A estratégia sem tática é o caminho mais lento para a vitória.
-            Tática sem estratégia é o ruído antes da derrota."
-            <br />- Sun Tzu
-          </div>
+      </div>
+      <div
+        className={`abas-more collapsible ${openDiv === 4 ? "is-open" : ""}`}
+      >
+        <p>
+          Construir projetos digitais exige mais do que apenas linguagens de
+          programação. O uso estratégico destas ferramentas não é opcional; são
+          requisitos fundamentais que garantem a construção sólida, a manutenção
+          eficiente, o controle e a organização impecável dos projetos desde o
+          primeiro clique até a entrega e além.
+        </p>
+        <div className="citacao">
+          "A estratégia sem tática é o caminho mais lento para a vitória. Tática
+          sem estratégia é o ruído antes da derrota."
+          <br />- Sun Tzu
         </div>
-      )}
+      </div>
       <div className="skills__container">
         {/* Swiper JS */}
         <Swiper

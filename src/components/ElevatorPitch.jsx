@@ -6,12 +6,12 @@ export function ElevatorPitch() {
           <h3>Digigram - </h3>
           <p>
             Quer um espaço para contar a sua história, apresentar sua marca ao
-            mundo, expor seu trabalho ou sua arte? Na Digigram, ajudamos você a
-            dar o próximo passo com confiança: criamos sites que mostram ao
-            mundo quem você é, com design marcante, estrutura estratégica e
-            tecnologia que trabalha por você. Mais do que um endereço na web,
-            seu site será a vitrine viva da sua marca, o espaço onde suas ideias
-            ganham forma e alcançam pessoas de verdade.
+            mundo, expor seu trabalho ou sua arte? Contribuo para que você dê o
+            próximo passo com confiança: desenvolvo sites que mostram ao mundo
+            quem você é, com design marcante, estrutura estratégica e tecnologia
+            que trabalha por você. Mais do que um endereço na web, seu site será
+            a vitrine viva da sua marca, o espaço onde suas ideias ganham forma
+            e alcançam pessoas de verdade.
           </p>
           <p>
             Criar um site é construir uma ponte entre você e quem está

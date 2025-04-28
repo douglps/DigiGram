@@ -185,6 +185,54 @@
     border-radius: 2rem 2rem 0 0;
     padding: 1.5rem 3rem;
   }
+  & div {
+    /* Estilo básico para as abas clicáveis */
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 1px solid $cor-roxa-secundaria;
+    border-bottom: none; /* Para simular abas */
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #1d2323;
+    }
+  }
+}
+
+.collapsible {
+  /* Estilos base para as divs colapsáveis */
+  max-height: 0; /* Altura máxima inicial: colapsada */
+  overflow: hidden; /* Esconde o conteúdo que excede a max-height */
+  transition: max-height 0.6s ease-out, opacity 1s cubic-bezier(0.1, 0, 1, 1); /* Anima max-height e opacity */
+  opacity: 0; /* Inicia transparente */
+  padding: 0 2rem; /* Remove padding vertical quando colapsado (ajuste conforme o design) */
+  /* Considere também margin-top/bottom se houver */
+  margin: 0 0 0 0; /* Remove margem vertical (ajuste conforme o design) */
+}
+
+.collapsible.is-open {
+  /* Estilos quando a div está aberta */
+  max-height: 100rem; /* Uma altura grande o suficiente para o conteúdo aparecer (ajuste se necessário) */
+  opacity: 1; /* Torna visível */
+  padding: 2rem; /* Adiciona o padding vertical desejado quando aberto */
+}
+
+/* Opcional: Estilo para o texto oculto e surgindo */
+.collapsible p {
+  /* Estilo para o parágrafo dentro das divs colapsáveis */
+  /* Pode adicionar transição específica para a cor ou outros estilos se quiser um fade mais granular */
+  transition: color 1s ease-out;
+  color: transparent; /* Cor do texto transparente por padrão (quando colapsado) */
+}
+
+.collapsible.is-open p {
+  color: #fff; /* Cor do texto normal quando aberto */
+}
+
+/* Opcional: Estilo para as abas ativas */
+.abas__container > div:active {
+  /* Você pode adicionar uma classe 'is-active' aos botões também, se quiser destacá-los */
+  /* Ex: className={`abas__container--back ${openDiv === 1 ? 'is-active' : ''}`} nos botões */
+  background-color: #633e9b52;
 }
 
 .skills {
