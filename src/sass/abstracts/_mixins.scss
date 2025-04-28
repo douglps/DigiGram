@@ -28,7 +28,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.1rem solid #888888;
 }
 
 @mixin fundo-transparente--br {
@@ -43,7 +42,7 @@
 }
 
 @mixin botao-classico--vd {
-  background-color: #00f050;
+  background-color: #ff8400;
   color: black;
   font-weight: 700;
   font-family: "Blenda";
@@ -59,13 +58,13 @@
 
   &:hover {
     cursor: pointer;
-    background-color: #00f050;
+    background-color: #ff8400;
     box-shadow: 0.2rem 0.5rem 1rem 0.2rem rgba(rgba(0, 0, 0, 0.295), 0.3) !important; // Adiciona um contorno de foco acessível
     transform: translate(-0.1rem, -0.1rem); // Um leve deslocamento para cima
   }
 
   &:active {
-    background: linear-gradient(#00f050, rgb(1, 128, 17));
+    background: linear-gradient(#ff8400, #cf6b00);
     // background-color: #57ffb0, black;
     // Adicione outros estilos para o estado ativo (pressionado)
     // transform: scale(0.98); // Um leve encolhimento ao clicar

@@ -25,6 +25,10 @@
   font-family: "Blenda";
   src: url("src/fonts/Blenda Script.otf") format("opentype");
 }
+@font-face {
+  font-family: "Nauman";
+  src: url("src/fonts/Nauman-Regular.ttf") format("truetype");
+}
 
 @mixin texto($familia, $tamanho, $peso, $altura) {
   font-family: $familia;

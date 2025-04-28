@@ -13,6 +13,7 @@
 
   &__container-text {
     @include texto("Genos", 2rem, 400, 2.4rem);
+    margin-top: 5rem;
     padding: 1.5rem;
     text-align: justify;
     text-align-last: right;
@@ -25,6 +26,7 @@
     display: inline-flex;
     justify-content: center;
     width: 93%;
+    gap: 2rem;
 
     &--highlight {
       display: flexbox;
@@ -35,6 +37,7 @@
     }
 
     &2 {
+      position: relative;
       display: flex;
       flex-direction: column;
       min-width: 32rem;
@@ -45,6 +48,32 @@
   }
 }
 
+.dobra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50rem;
+  height: 50rem;
+  background-image: linear-gradient(135deg, #ff84009e 0%, transparent 50%);
+  z-index: -1;
+}
+
+.maior-que {
+  position: absolute;
+  width: 8rem;
+  top: 0rem;
+  right: 3rem;
+}
+
+.me_container {
+  margin-top: 8rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+// ANIMAÇÃO
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -78,13 +107,17 @@
   height: inherit;
   visibility: hidden;
   & p {
+    position: absolute;
+    top: 1rem;
     color: black;
     text-align: left;
   }
   &--btn {
     @include botao-classico--vd;
+    position: absolute;
+    bottom: 1rem;
     width: 60%;
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
   &-pai {
     position: relative;
@@ -111,12 +144,14 @@
   height: 2rem;
 }
 
+// TERMINAL *********************************************************
 .terminal {
   display: inline;
   justify-content: space-between;
   align-items: center;
   background-color: black;
   width: 88%;
+  height: 18rem;
   margin: 3rem;
   padding: 2.5rem;
   text-align: left;
@@ -124,73 +159,113 @@
   border-left: 0.1rem $cor-verde-primaria solid;
 }
 
-.dot {
-  position: absolute;
+// Skills ************************************************************
+
+.abas-more {
+  @include fundo-transparente--br;
   display: flex;
-  bottom: 0;
-  left: 28rem;
-  writing-mode: vertical-rl;
-  z-index: 1;
+  justify-content: end;
+  flex-direction: column;
+  text-align: justify;
+  text-indent: 2rem;
+  padding: 2rem;
+}
+
+.abas__container {
+  @include caixa-flex--center;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
+  cursor: pointer;
+  &--back,
+  &--front,
+  &--ux_ui,
+  &--ferramentas {
+    @include fundo-transparente--br;
+    border-radius: 2rem 2rem 0 0;
+    padding: 1.5rem 3rem;
+  }
 }
 
 .skills {
-  width: 93%;
+  margin-top: 5rem;
+  width: 100%;
+  height: auto;
   &__container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2rem;
-
-    &--imgbg {
+    cursor: grabbing;
+  }
+  &-icon {
+    &--fundo-animado {
       @include circulo-flex--center--b;
-      overflow: hidden;
-      background-color: $cor-vermelho-claro-primaria;
-      width: 7rem;
-      height: 7rem;
-      box-shadow: inset 0rem 0rem 0rem 5rem rgb(255 255 255 / 46%),
-        inset -1rem -1rem 1rem 1.4rem rgb(3 9 51),
-        inset 3rem 3rem 3rem 1rem rgb(189 183 127 / 11%),
-        inset -1.8rem -1.9rem 0.3rem 3rem rgb(219 143 143 / 5%),
-        inset -1.4rem -1.6rem 0.2rem 1rem rgb(9 30 5 / 36%);
-
-      & img {
-        transition: transform 0.5s ease-in-out;
-        width: 6rem;
-        height: 6rem;
-        transform: translate(1%, -3%);
-        margin: 0.5rem;
-        padding: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-          transform: scale(1.5);
-        }
+      margin-bottom: 1rem;
+      width: 6.5rem;
+      height: 6.5rem;
+      cursor: pointer;
+      background-image: conic-gradient(
+        darken($cor-verde-secundaria, 30%) 180deg,
+        darken(white, 30%) 360deg
+      );
+      transition: all 0.3s ease-out;
+      &:hover {
+        transform: scale(1.3);
       }
+    }
+    &--fundo {
+      @include circulo-flex--center--b;
+      @include fundo-transparente--pr;
+      width: 6rem;
+      height: 6rem;
+      padding: 1.2rem;
+      border-width: 0rem;
     }
   }
 }
 
-.me_container {
-  width: 120%;
+.skill {
+  @include caixa-flex--center;
+  flex-direction: column;
+  color: #000;
+}
 
-  img {
-    width: 100%;
+#npm,
+#json {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.front-end__container,
+.back-end__container,
+.ux-ui__container,
+.ferramentas__container {
+  @include caixa-flex--center;
+  @include fundo-transparente--br;
+  flex-direction: column;
+  padding: 2.5rem;
+
+  &--content {
+    @include caixa-flex--center;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.795);
+    gap: 3rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    align-self: center;
+    box-shadow: 0.3rem 0.3rem 1.5rem 0.2rem $cor-roxa-secundaria;
   }
 }
 
-.bar {
-  width: 95%;
-  height: 4rem;
-  background-color: $cor-azul-primaria;
-  border-radius: 5rem;
-  margin: 0.5rem auto;
+.citacao {
+  color: $cor-laranja-primaria;
+  text-align: right;
+  margin-top: 2rem;
 }
 
+// PORIFÓLIO *******************************************************
+// ARQUIVO PROPRIO
+
+// FOOTER **********************************************************
 .footer {
   @include caixa-flex--center;
   width: 100%;
@@ -204,17 +279,17 @@
   &__cta {
     margin-top: 5rem;
     @include caixa-flex--center;
-    width: 100dvw;
+    width: 100%;
     padding: 0.5rem 0;
     border-radius: 1rem;
-    box-shadow: inset 0 0 4rem 0.7rem $cor-verde-primaria;
-    background-color: white;
+    // background-color: lighten($cor-verde-primaria, 20%);
     color: #000;
     & a {
-      font-size: 3rem;
-      text-decoration: underline;
-      text-underline-offset: 0.9rem;
-      text-decoration-thickness: 0.2rem;
+      @include botao-classico--vd // font-size: 3rem;
+        // text-decoration: underline;
+        // text-underline-offset: 0.9rem;
+        // text-decoration-thickness: 0.2rem;
+;
     }
   }
 }

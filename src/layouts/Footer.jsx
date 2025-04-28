@@ -4,7 +4,7 @@ export function Footer() {
       <div className="rodape__container">
         <div className="rodape__cta">
           <p>
-            <a href="">Vamos criar juntos?</a>
+            <a href="">Quero meu site na web!</a>
           </p>
         </div>
         <div className="social__container">

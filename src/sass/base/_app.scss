@@ -12,9 +12,9 @@
   color: rgba(255, 255, 255, 0.87);
   background-image: linear-gradient(
     45deg,
-    rgba(12, 20, 27, 0.5) 55%,
-    #11393b 85%,
-    rgb(19 100 133 / 59%) 91%
+    darken($cor-roxa-secundaria, 35%) 30%,
+    darken($cor-verde-secundaria, 25%) 85%,
+    darken($cor-roxa-primaria, 40%) 100%
   );
   background-size: cover;
   background-position: center center;
@@ -56,6 +56,7 @@ html {
   }
 
   user-select: none;
+  max-width: 100%;
 }
 
 body {
@@ -64,6 +65,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   flex-direction: column;
+}
+
+p {
+  font-family: "Nauman";
 }
 
 img {
@@ -88,14 +93,17 @@ img {
   align-items: center;
 }
 
+#logo {
+  filter: hue-rotate(300deg);
+}
+
 .logo {
   display: flex;
-  will-change: filter;
-  transition: filter 1600ms;
   align-items: center;
 
-  .logo:hover {
-    filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(360deg);
+  &:hover {
+    transition: filter 1600ms;
+    filter: drop-shadow(0 0 1.5rem $cor-laranja-primaria) hue-rotate(480deg);
   }
 }
 // -----------------------------------------------------------------------------
@@ -215,7 +223,7 @@ img {
     @include caixa-flex--center;
     height: auto;
     width: 100%;
-    padding: 0 1rem;
+    // padding: 0 1rem;
     justify-content: space-between;
     align-items: flex-end;
     overflow: hidden;
@@ -308,15 +316,15 @@ img {
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: #213547;
+//     background-color: #ffffff;
+//   }
+//   a:hover {
+//     color: $cor-roxa-primaria;
+//   }
+//   button {
+//     background-color: #f9f9f9;
+//   }
+// }

@@ -16,19 +16,25 @@ a {
 .menu a {
   color: #ffffff;
   text-decoration: underline;
-  text-decoration-color: #00f0e7;
+  text-decoration-color: lighten($cor-roxa-secundaria, 30%);
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.6rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in;
+  padding: 0 1rem;
+  border: solid 0.2rem transparent;
+  border-radius: 1rem;
   &:hover {
-    color: #bafffd;
-    text-decoration-color: $cor-verde-primaria;
-    text-decoration-thickness: 0.3rem;
-    text-underline-offset: 0.6rem;
+    text-decoration: none;
+    // color: lighten($cor-roxa-primaria, 35%);
+    // text-decoration-color: $cor-roxa-primaria;
+    border: solid 0.2rem $cor-verde-primaria;
+    border-width: 0 0.2rem;
+    // text-decoration-thickness: 0.3rem;
+    // text-underline-offset: 0.6rem;
   }
 
   &:active {
-    color: $cor-verde-primaria;
+    color: $cor-laranja-primaria;
   }
 }
 

@@ -10,7 +10,7 @@
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: linear-gradient(45deg, rgba(12, 20, 27, 0.5) 55%, #11393b 85%, rgba(19, 100, 133, 0.59) 91%);
+  background-image: linear-gradient(45deg, rgb(17.564516129, 11, 27.5) 30%, rgb(17.6363636364, 30.8636363636, 20.3920454545) 85%, rgb(21.3675889328, 3.1422924901, 49.8577075099) 100%);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -32,6 +32,7 @@
 html {
   font-size: 62.5%;
   user-select: none;
+  max-width: 100%;
 }
 @media (min-width: 75.0625em) {
   html {
@@ -77,6 +78,10 @@ body {
   flex-direction: column;
 }
 
+p {
+  font-family: "Nauman";
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -99,14 +104,17 @@ img {
   align-items: center;
 }
 
+#logo {
+  filter: hue-rotate(300deg);
+}
+
 .logo {
   display: flex;
-  will-change: filter;
-  transition: filter 1600ms;
   align-items: center;
 }
-.logo .logo:hover {
-  filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(360deg);
+.logo:hover {
+  transition: filter 1600ms;
+  filter: drop-shadow(0 0 1.5rem #ff8400) hue-rotate(480deg);
 }
 
 .caixa {
@@ -167,7 +175,7 @@ img {
   transform: rotate(720deg) scale(1.5);
 }
 .cabecalho .tema img:active {
-  background-color: #00f050;
+  background-color: #11f041;
 }
 .cabecalho .github {
   box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
@@ -198,7 +206,7 @@ img {
   transition: transform 0.5s ease-in-out;
 }
 .cabecalho .github img:hover:active {
-  background-color: #00f050;
+  background-color: #11f041;
 }
 .cabecalho .cafe {
   box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
@@ -229,7 +237,7 @@ img {
   transition: transform 0.5s ease-in-out;
 }
 .cabecalho .cafe img:active {
-  background-color: #00f050;
+  background-color: #11f041;
 }
 .cabecalho .chat {
   box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
@@ -261,7 +269,7 @@ img {
   transition: transform 0.5s ease-in-out;
 }
 .cabecalho .chat img:active {
-  background-color: #00f050;
+  background-color: #11f041;
 }
 .cabecalho__logo--img {
   box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
@@ -290,7 +298,6 @@ img {
   align-items: center;
   height: auto;
   width: 100%;
-  padding: 0 1rem;
   justify-content: space-between;
   align-items: flex-end;
   overflow: hidden;
@@ -298,7 +305,7 @@ img {
 }
 
 .botao {
-  background-color: #00f050;
+  background-color: #ff8400;
   color: black;
   font-weight: 700;
   font-family: "Blenda";
@@ -313,12 +320,12 @@ img {
 }
 .botao:hover {
   cursor: pointer;
-  background-color: #00f050;
+  background-color: #ff8400;
   box-shadow: 0.2rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.3) !important;
   transform: translate(-0.1rem, -0.1rem);
 }
 .botao:active {
-  background: linear-gradient(#00f050, rgb(1, 128, 17));
+  background: linear-gradient(#ff8400, #cf6b00);
   transform: translate(0rem, 0.1rem);
   box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5) !important;
   transition: 0.05s ease-in-out;
@@ -404,7 +411,7 @@ img {
   font-family: "Hero";
   font-size: 2rem;
   font-weight: 600;
-  color: #00f050;
+  color: #11f041;
 }
 
 .blinking-cursor {
@@ -446,18 +453,6 @@ img {
   color: #121212;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 @font-face {
   font-family: "Shmooper";
   src: url("src/fonts/Shmooper.ttf") format("truetype");
@@ -477,6 +472,10 @@ img {
 @font-face {
   font-family: "Blenda";
   src: url("src/fonts/Blenda Script.otf") format("opentype");
+}
+@font-face {
+  font-family: "Nauman";
+  src: url("src/fonts/Nauman-Regular.ttf") format("truetype");
 }
 h1 {
   font-family: "Kabur", cursive;
@@ -513,19 +512,21 @@ a {
 .menu a {
   color: #ffffff;
   text-decoration: underline;
-  text-decoration-color: #00f0e7;
+  text-decoration-color: rgb(178.8709677419, 155, 215);
   text-decoration-thickness: 0.1rem;
   text-underline-offset: 0.6rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in;
+  padding: 0 1rem;
+  border: solid 0.2rem transparent;
+  border-radius: 1rem;
 }
 .menu a:hover {
-  color: #bafffd;
-  text-decoration-color: #00f050;
-  text-decoration-thickness: 0.3rem;
-  text-underline-offset: 0.6rem;
+  text-decoration: none;
+  border: solid 0.2rem #11f041;
+  border-width: 0 0.2rem;
 }
 .menu a:active {
-  color: #00f050;
+  color: #ff8400;
 }
 
 p {
@@ -534,7 +535,7 @@ p {
 
 .cabecalho__logo {
   font-family: "Satisfy", Arial, Helvetica, sans-serif;
-  color: #00f050;
+  color: #11f041;
   letter-spacing: 0.2rem;
   font-size: 3.2rem;
 }
@@ -578,7 +579,7 @@ p {
 }
 
 .botoes {
-  background-color: #00f050;
+  background-color: #ff8400;
   color: black;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
@@ -593,12 +594,12 @@ p {
 }
 .botoes:hover {
   cursor: pointer;
-  background-color: #00f050;
+  background-color: #ff8400;
   box-shadow: 0.2rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.3) !important;
   transform: translate(-0.1rem, -0.1rem);
 }
 .botoes:active {
-  background: linear-gradient #00f050, rgb(0, 90, 12);
+  background: linear-gradient #ff8400, #532b00;
   transform: translate(0rem, 0.1rem);
   box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5) !important;
   transition: 0.01s ease-in-out;
@@ -621,7 +622,7 @@ p {
   text-align: center;
   user-select: none;
   margin: 1.5rem 1rem 1rem 0;
-  background-color: #000;
+  background-color: black;
   border-radius: 50%;
   padding: 0.5rem;
 }
@@ -673,6 +674,10 @@ p {
   font-family: "Blenda";
   src: url("src/fonts/Blenda Script.otf") format("opentype");
 }
+@font-face {
+  font-family: "Nauman";
+  src: url("src/fonts/Nauman-Regular.ttf") format("truetype");
+}
 h1 {
   font-family: "Kabur", cursive;
   font-size: 3.2rem;
@@ -705,6 +710,7 @@ h3 {
   font-weight: 400;
   line-height: 2.4rem;
   text-align: center;
+  margin-top: 5rem;
   padding: 1.5rem;
   text-align: justify;
   text-align-last: right;
@@ -717,6 +723,7 @@ h3 {
   display: inline-flex;
   justify-content: center;
   width: 93%;
+  gap: 2rem;
 }
 .hero__container--highlight {
   display: flexbox;
@@ -726,12 +733,37 @@ h3 {
   font-size: 2.4rem;
 }
 .hero__container2 {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 32rem;
   min-width: 55%;
   margin: 3rem 2rem;
   letter-spacing: 0.4rem;
+}
+
+.dobra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50rem;
+  height: 50rem;
+  background-image: linear-gradient(135deg, rgba(255, 132, 0, 0.6196078431) 0%, transparent 50%);
+  z-index: -1;
+}
+
+.maior-que {
+  position: absolute;
+  width: 8rem;
+  top: 0rem;
+  right: 3rem;
+}
+
+.me_container {
+  margin-top: 8rem;
+}
+.me_container img {
+  width: 100%;
 }
 
 @keyframes rotate {
@@ -767,11 +799,13 @@ h3 {
   visibility: hidden;
 }
 .msg-cta p {
+  position: absolute;
+  top: 1rem;
   color: black;
   text-align: left;
 }
 .msg-cta--btn {
-  background-color: #00f050;
+  background-color: #ff8400;
   color: black;
   font-weight: 700;
   font-family: "Blenda";
@@ -783,17 +817,19 @@ h3 {
   align-self: center;
   user-select: none;
   font-size: 1.6rem;
+  position: absolute;
+  bottom: 1rem;
   width: 60%;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 .msg-cta--btn:hover {
   cursor: pointer;
-  background-color: #00f050;
+  background-color: #ff8400;
   box-shadow: 0.2rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.3) !important;
   transform: translate(-0.1rem, -0.1rem);
 }
 .msg-cta--btn:active {
-  background: linear-gradient(#00f050, rgb(1, 128, 17));
+  background: linear-gradient(#ff8400, #cf6b00);
   transform: translate(0rem, 0.1rem);
   box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5) !important;
   transition: 0.05s ease-in-out;
@@ -871,75 +907,132 @@ h3 {
   align-items: center;
   background-color: black;
   width: 88%;
+  height: 18rem;
   margin: 3rem;
   padding: 2.5rem;
   text-align: left;
   border-radius: 0.5rem;
-  border-left: 0.1rem #00f050 solid;
+  border-left: 0.1rem #11f041 solid;
 }
 
-.dot {
-  position: absolute;
+.abas-more {
+  box-shadow: inset 0rem 0rem 0rem 40rem rgba(207, 207, 207, 0.06);
+  border: none;
+  backdrop-filter: blur(1.5rem);
   display: flex;
-  bottom: 0;
-  left: 28rem;
-  writing-mode: vertical-rl;
-  z-index: 1;
+  justify-content: end;
+  flex-direction: column;
+  text-align: justify;
+  text-indent: 2rem;
+  padding: 2rem;
+}
+
+.abas__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+.abas__container--back, .abas__container--front, .abas__container--ux_ui, .abas__container--ferramentas {
+  box-shadow: inset 0rem 0rem 0rem 40rem rgba(207, 207, 207, 0.06);
+  border: none;
+  backdrop-filter: blur(1.5rem);
+  border-radius: 2rem 2rem 0 0;
+  padding: 1.5rem 3rem;
 }
 
 .skills {
-  width: 93%;
+  margin-top: 5rem;
+  width: 100%;
+  height: auto;
 }
 .skills__container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 2rem;
+  cursor: grabbing;
 }
-.skills__container--imgbg {
+.skills-icon--fundo-animado {
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.1rem solid #888888;
-  overflow: hidden;
-  background-color: #f0d7d7;
-  width: 7rem;
-  height: 7rem;
-  box-shadow: inset 0rem 0rem 0rem 5rem rgba(255, 255, 255, 0.46), inset -1rem -1rem 1rem 1.4rem rgb(3, 9, 51), inset 3rem 3rem 3rem 1rem rgba(189, 183, 127, 0.11), inset -1.8rem -1.9rem 0.3rem 3rem rgba(219, 143, 143, 0.05), inset -1.4rem -1.6rem 0.2rem 1rem rgba(9, 30, 5, 0.36);
+  margin-bottom: 1rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  cursor: pointer;
+  background-image: conic-gradient(rgb(8.3636363636, 14.6363636364, 9.6704545455) 180deg, rgb(178.5, 178.5, 178.5) 360deg);
+  transition: all 0.3s ease-out;
 }
-.skills__container--imgbg img {
-  transition: transform 0.5s ease-in-out;
-  width: 6rem;
-  height: 6rem;
-  transform: translate(1%, -3%);
-  margin: 0.5rem;
-  padding: 1rem;
+.skills-icon--fundo-animado:hover {
+  transform: scale(1.3);
+}
+.skills-icon--fundo {
+  border-radius: 50%;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-.skills__container--imgbg img:hover {
-  transform: scale(1.5);
-}
-
-.me_container {
-  width: 120%;
-}
-.me_container img {
-  width: 100%;
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
+  backdrop-filter: blur(1.5rem);
+  width: 6rem;
+  height: 6rem;
+  padding: 1.2rem;
+  border-width: 0rem;
 }
 
-.bar {
-  width: 95%;
-  height: 4rem;
-  background-color: #084b79;
-  border-radius: 5rem;
-  margin: 0.5rem auto;
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+}
+
+#npm,
+#json {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.front-end__container,
+.back-end__container,
+.ux-ui__container,
+.ferramentas__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0rem 0rem 0rem 40rem rgba(207, 207, 207, 0.06);
+  border: none;
+  backdrop-filter: blur(1.5rem);
+  flex-direction: column;
+  padding: 2.5rem;
+}
+.front-end__container--content,
+.back-end__container--content,
+.ux-ui__container--content,
+.ferramentas__container--content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.795);
+  gap: 3rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  align-self: center;
+  box-shadow: 0.3rem 0.3rem 1.5rem 0.2rem #633e9b;
+}
+
+.citacao {
+  color: #ff8400;
+  text-align: right;
+  margin-top: 2rem;
 }
 
 .footer {
@@ -963,18 +1056,76 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100dvw;
+  width: 100%;
   padding: 0.5rem 0;
   border-radius: 1rem;
-  box-shadow: inset 0 0 4rem 0.7rem #00f050;
-  background-color: white;
   color: #000;
 }
 .rodape__cta a {
-  font-size: 3rem;
-  text-decoration: underline;
-  text-underline-offset: 0.9rem;
-  text-decoration-thickness: 0.2rem;
+  background-color: #ff8400;
+  color: black;
+  font-weight: 700;
+  font-family: "Blenda";
+  border-radius: 3rem;
+  transition: 0.15s ease-in-out;
+  border: 0.2rem solid rgba(255, 251, 251, 0.4117647059);
+  padding: 0.5rem 1.5rem;
+  margin: 0 1rem;
+  align-self: center;
+  user-select: none;
+  font-size: 1.6rem;
+}
+.rodape__cta a:hover {
+  cursor: pointer;
+  background-color: #ff8400;
+  box-shadow: 0.2rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.3) !important;
+  transform: translate(-0.1rem, -0.1rem);
+}
+.rodape__cta a:active {
+  background: linear-gradient(#ff8400, #cf6b00);
+  transform: translate(0rem, 0.1rem);
+  box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5) !important;
+  transition: 0.05s ease-in-out;
+}
+.rodape__cta a:focus {
+  outline: none;
+  box-shadow: 0rem 0.5rem 0.5rem 0.1rem rgba(0, 0, 0, 0.3);
+}
+.rodape__cta a:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.rodape__cta a--menu {
+  border-radius: 50rem;
+  transition: 0.15s ease-in-out;
+  border-width: 0;
+  padding: 0 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  user-select: none;
+}
+.rodape__cta a--menu:hover {
+  cursor: pointer;
+  background-color: #00f050;
+  box-shadow: 0.2rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.3) !important;
+  transform: translate(-0.1rem, -0.1rem);
+}
+.rodape__cta a--menu:active {
+  background: linear-gradient(#00f050, rgb(1, 128, 17));
+  transform: translate(0rem, 0.1rem);
+  box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5) !important;
+  transition: 0.05s ease-in-out;
+}
+.rodape__cta a--menu:focus {
+  outline: none;
+  box-shadow: 0rem 0.5rem 0.5rem 0.1rem rgba(0, 0, 0, 0.3);
+}
+.rodape__cta a--menu:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .social__container {
@@ -996,7 +1147,7 @@ h3 {
 }
 .social__container img:hover {
   transform: scale(1.3);
-  border: 0.2rem solid #00f050;
+  border: 0.2rem solid #11f041;
 }
 
 .cta span {
@@ -1020,8 +1171,8 @@ h3 {
   align-items: center;
   cursor: pointer;
   user-select: none;
-  border-left: 0.1rem solid #00f050;
-  border-right: 0.1rem solid #00f050;
+  border-left: 0.1rem solid #11f041;
+  border-right: 0.1rem solid #11f041;
   border-radius: 1rem;
   padding-left: 1.5rem;
   padding-right: 1rem;

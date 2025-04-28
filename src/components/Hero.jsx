@@ -8,7 +8,7 @@ export function Hero() {
     const timer = setTimeout(() => {
       setHideLoading(true); // Esconde o loading
       setShowMessage(true); // Mostra a mensagem
-    }, 5000); // Ajuste o tempo para o fim da animação
+    }, 1500); // Ajuste o tempo para o fim da animação
 
     return () => clearTimeout(timer);
   }, []);
@@ -17,6 +17,7 @@ export function Hero() {
     <section className="hero" id="SobreMim">
       <div className="hero__container">
         <div className="me_container">
+          <div className="dobra"></div>
           <div id="me">
             <h1>Douglas Lopes</h1>
             <img
@@ -29,6 +30,9 @@ export function Hero() {
           </div>
         </div>
         <div className="hero__container2">
+          <div className="maior-que">
+            <img src="src/assets/images/code-3maior-que.png" alt="" />
+          </div>
           <div className="hero__container-text">
             Sou{" "}
             <span className="hero__container--highlight">
@@ -63,7 +67,7 @@ export function Hero() {
               style={{
                 visibility: showMessage ? "visible" : "hidden",
                 opacity: showMessage ? 1 : 0,
-                transition: "opacity 0.5s ease",
+                transition: "opacity 0.1s ease",
               }}
             >
               <p>
@@ -82,9 +86,6 @@ export function Hero() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="dot">
-        .........................................................................
       </div>
     </section>
   );

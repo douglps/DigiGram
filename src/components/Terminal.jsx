@@ -7,12 +7,12 @@ export function Terminal() {
         <Typewriter
           words={[
             "'Simplicidade é a máxima sofisticação.' — Leonardo da Vinci ",
-            "Desenvolvedor => Design. Código. Impacto.",
-            "Muito mais que apenas um endereço na web.",
-            "Layout bonito sim, e com atitude também!",
-            "Não há segunda vez para a primeira impressão.",
-            "Simples por fora. Poderoso por dentro.",
-            "Design pensado. Código limpo.",
+            "Desenvolvedor => Design. Código. Impacto. ",
+            "'Você nunca terá uma segunda chance de causar uma primeira impressão forte.' - Will Rogers",
+            "Muito mais que apenas um endereço na web. ",
+            "Layout bonito sim, e com atitude também! ",
+            "Simples por fora. Poderoso por dentro. ",
+            "Design pensado. Código limpo. ",
             "Ao pixel e além! ",
           ]}
           fixedCount={3} // As 3 primeiras serão fixas e em ordem
@@ -21,7 +21,9 @@ export function Terminal() {
           deletingSpeed={50}
           pauseTime={1800}
         />
-        <div>/ {">"}</div>
+        <div>
+          <br /> / {">"}
+        </div>
       </div>
     </section>
   );
