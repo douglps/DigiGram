@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Control } from "./components/Control";
 import { Cabecalho } from "./components/Cabecalho";
 import { Hero } from "./components/Hero";
 import { ElevatorPitch } from "./components/ElevatorPitch";
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Cabecalho />
+      <Control />
       <Hero />
       <Terminal />
       <div>lazing page</div>

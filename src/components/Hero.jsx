@@ -16,23 +16,23 @@ export function Hero() {
   return (
     <section className="hero" id="SobreMim">
       <div className="hero__container">
-        <div className="me_container">
-          <div className="dobra"></div>
-          <div id="me">
+        <div className="dobra"></div>
+        <div className="me__container">
+          <div className="me__container--foto">
             <h1>Douglas Lopes</h1>
             <img
               src="src/assets/images/avatar.png"
               alt="Avatar de Douglas Lopes"
             />
+            <div className="maior-que">
+              <img src="src/assets/images/code-3maior-que.png" alt="" />
+            </div>
           </div>
-          <div id="dev">
+          <div className="dev">
             <h2>Desenvolvedor Front-End</h2>
           </div>
         </div>
         <div className="hero__container2">
-          <div className="maior-que">
-            <img src="src/assets/images/code-3maior-que.png" alt="" />
-          </div>
           <div className="hero__container-text">
             Sou{" "}
             <span className="hero__container--highlight">
@@ -51,39 +51,6 @@ export function Hero() {
                 Continue, e descubra até onde podemos ir.
               </span>
             </p>
-          </div>
-
-          <div className="msg-cta-pai">
-            {!hideLoading && (
-              <div
-                className="loading"
-                style={{ animation: "rotate 5s linear" }}
-              >
-                <img src="src/assets/images/utils/loading.svg" alt="Loading" />
-              </div>
-            )}
-            <div
-              className="msg-cta"
-              style={{
-                visibility: showMessage ? "visible" : "hidden",
-                opacity: showMessage ? 1 : 0,
-                transition: "opacity 0.1s ease",
-              }}
-            >
-              <p>
-                O próximo grande projeto pode começar com uma simples conversa.
-              </p>
-              <div className="msg-cta--btn">Vamos Conversar!</div>
-              <div className="check-all">
-                <img
-                  src="src/assets/images/utils/check-all.svg"
-                  alt="Check all"
-                />
-              </div>
-              <div className="seta-msg">
-                <img src="src/assets/images/seta-msg.png" alt="Seta mensagem" />
-              </div>
-            </div>
           </div>
         </div>
       </div>

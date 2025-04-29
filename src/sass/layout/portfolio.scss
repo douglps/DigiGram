@@ -1,11 +1,13 @@
 @import "../abstracts/mixins.scss";
 
 .portfolio {
-  width: 95%;
+  width: 80%;
 
   &--img {
     @include caixa-flex--center;
     margin: 1rem;
+    overflow: hidden;
+    height: 30%;
 
     & a {
       overflow: hidden;
@@ -20,7 +22,7 @@
   &--portfolio {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 3rem;
-    row-gap: 4rem;
+    row-gap: 2rem;
     align-items: center;
     justify-content: center;
   }
@@ -35,6 +37,6 @@
 }
 
 .img-aleatoria {
-  grid-column: 3 / span 2;
+  grid-column: 3 / span 3;
   grid-row: 1 / span 2;
 }

@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation, Scrollbar, A11y } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+import "swiper/css/scrollbar";
 
 export function Skills() {
   const [openDiv, setOpenDiv] = useState(null);
@@ -12,6 +17,103 @@ export function Skills() {
       setOpenDiv(divName);
     }
   };
+  const skills = [
+    // Front-end ************************************
+    {
+      src: "src/assets/images/skills/html5.svg",
+      alt: "HTML 5",
+      name: "HTML 5",
+    },
+    { src: "src/assets/images/skills/css.svg", alt: "CSS 3", name: "CSS 3" },
+    {
+      src: "src/assets/images/skills/javascript.svg",
+      alt: "JavaScript",
+      name: "JavaScript",
+    },
+    {
+      src: "src/assets/images/skills/react.svg",
+      alt: "React",
+      name: "React",
+    },
+    {
+      src: "src/assets/images/skills/tailwind.svg",
+      alt: "Tailwind CSS",
+      name: "Tailwind CSS",
+    },
+    {
+      src: "src/assets/images/skills/bootstrap.svg",
+      alt: "Bootstrap",
+      name: "Bootstrap",
+    },
+    // Back-end *********************************
+    {
+      src: "src/assets/images/skills/python.svg",
+      alt: "Python",
+      name: "Python",
+    },
+    {
+      src: "src/assets/images/skills/java-dark.svg",
+      alt: "Java",
+      name: "Java",
+    },
+    {
+      src: "src/assets/images/skills/nodejs.svg",
+      alt: "Node.Js",
+      name: "Node.Js",
+    },
+    {
+      src: "src/assets/images/skills/json.svg",
+      alt: "JSON",
+      name: "JSON",
+    },
+    // UI/UX *********************************
+    {
+      src: "src/assets/images/skills/figma.svg",
+      alt: "Figma",
+      name: "Figma",
+    },
+    {
+      src: "src/assets/images/skills/canva.svg",
+      alt: "Canva",
+      name: "Canva",
+    },
+    {
+      src: "src/assets/images/skills/krita.svg",
+      alt: "Krita",
+      name: "Krita",
+    },
+    // Ferramentas *********************************
+    {
+      src: "src/assets/images/skills/git.svg",
+      alt: "Git",
+      name: "Git",
+    },
+    {
+      src: "src/assets/images/skills/github.svg",
+      alt: "GitHub",
+      name: "GitHub",
+    },
+    {
+      src: "src/assets/images/skills/windows.svg",
+      alt: "Windows",
+      name: "Windows",
+    },
+    {
+      src: "src/assets/images/skills/npm.svg",
+      alt: "npm",
+      name: "npm",
+    },
+    {
+      src: "src/assets/images/skills/vite.svg",
+      alt: "Vite",
+      name: "Vite",
+    },
+    {
+      src: "src/assets/images/skills/firebase.PNG",
+      alt: "Firebase",
+      name: "Firebase",
+    },
+  ];
 
   return (
     <section className="skills" id="Skills">
@@ -104,291 +206,37 @@ export function Skills() {
         </div>
       </div>
       <div className="skills__container">
-        {/* Swiper JS */}
         <Swiper
-          modules={[Autoplay]}
-          slidesPerView={1}
+          modules={[Autoplay, Navigation, Scrollbar, A11y]}
+          spaceBetween={130}
+          slidesPerView={6}
+          navigation
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
           loop={true}
-          autoplay={{ delay: 4000, disableOnInteraction: true }}
+          autoplay={{ delay: 2000, disableOnInteraction: true }}
           className="skills-swiper"
         >
           {/* Front-end Container */}
-          <SwiperSlide>
-            <div className="front-end__container">
-              <div>FRONT-END</div>
-              <div className="front-end__container--content">
+          {skills.map((skill, index) => (
+            <SwiperSlide key={index}>
+              <div className="skills__container--content">
                 <div className="skill">
                   <div className="skills-icon--fundo-animado">
                     <div className="skills-icon--fundo">
                       <img
                         className="skills-icon"
-                        src="src/assets/images/skills/html5.svg"
-                        alt="HTML 5"
+                        src={skill.src}
+                        alt={skill.alt}
                       />
                     </div>
                   </div>
-                  <div>HTML 5</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/css.svg"
-                        alt="CSS 3"
-                      />
-                    </div>
-                  </div>
-                  <div>Css 3</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/javascript.svg"
-                        alt="JavaScript"
-                      />
-                    </div>
-                  </div>
-                  JavaScript
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/react.svg"
-                        alt="HTML5"
-                      />
-                    </div>
-                  </div>
-                  <div>React JS</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/tailwind.svg"
-                        alt="Tailwind CSS"
-                      />
-                    </div>
-                  </div>
-                  <div>Tailwind CSS</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/bootstrap.svg"
-                        alt="Bootstrap"
-                      />
-                    </div>
-                  </div>
-                  <div>Bootstrap</div>
+                  <div className="skill--nome">{skill.name}</div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-
-          {/* Back-end Container */}
-          <SwiperSlide>
-            <div className="back-end__container">
-              <div>BACK-END</div>
-              <div className="back-end__container--content">
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/nodejs.svg"
-                        alt="Node JS"
-                      />
-                    </div>
-                  </div>
-                  <div>Node JS</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/php.svg"
-                        alt="PHP"
-                      />
-                    </div>
-                  </div>
-                  <div>PHP</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/java-dark.svg"
-                        alt="Java"
-                      />
-                    </div>
-                  </div>
-                  <div>Java</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/python.svg"
-                        alt="Python"
-                      />
-                    </div>
-                  </div>
-                  <div>Python</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        id="json"
-                        src="src/assets/images/skills/json.svg"
-                        alt="JSON"
-                      />
-                    </div>
-                  </div>
-                  <div>JSON</div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          {/* UX/UI Container */}
-          <SwiperSlide>
-            <div className="ux-ui__container">
-              <div>UX/UI - DESIGN</div>
-              <div className="ux-ui__container--content">
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/sass.svg"
-                        alt="Sass"
-                      />
-                    </div>
-                  </div>
-                  <div>Sass</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/figma.svg"
-                        alt="Figma"
-                      />
-                    </div>
-                  </div>
-                  <div>Figma</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/canva.svg"
-                        alt="Canva"
-                      />
-                    </div>
-                  </div>
-                  <div>Canva</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/krita.svg"
-                        alt="Krita"
-                      />
-                    </div>
-                  </div>
-                  <div>Krita</div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          {/* Ferramentas */}
-          <SwiperSlide>
-            <div className="ferramentas__container">
-              <div>FERRAMENTAS</div>
-              <div className="ferramentas__container--content">
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/git.svg"
-                        alt="Git"
-                      />
-                    </div>
-                  </div>
-                  <div>Git</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/github.svg"
-                        alt="GitHub"
-                      />
-                    </div>
-                  </div>
-                  <div>GitHub</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/windows.svg"
-                        alt="Windows"
-                      />
-                    </div>
-                  </div>
-                  <div>Windows</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        id="npm"
-                        src="src/assets/images/skills/npm.svg"
-                        alt="npm"
-                      />
-                    </div>
-                  </div>
-                  <div>npm</div>
-                </div>
-                <div className="skill">
-                  <div className="skills-icon--fundo-animado">
-                    <div className="skills-icon--fundo">
-                      <img
-                        className="skills-icon"
-                        src="src/assets/images/skills/vite.svg"
-                        alt="Vite"
-                      />
-                    </div>
-                  </div>
-                  <div>Vite</div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

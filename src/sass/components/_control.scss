@@ -1,0 +1,114 @@
+@import "../abstracts/_mixins.scss";
+@import "../abstracts/_variables.scss";
+.control__container {
+  .control__aside {
+    position: fixed;
+    right: 0rem;
+    top: 0rem;
+    display: flex;
+    flex-direction: column;
+    width: 3.5em;
+    height: auto;
+    align-items: end;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    z-index: 999;
+
+    .botao-plus {
+      @include caixa-flex--center;
+      @include fundo-transparente--pr;
+      border-radius: 5rem 0 0 5rem;
+      width: 5rem;
+      height: 5rem;
+      justify-content: center;
+      align-items: center;
+      & img {
+        background-color: black;
+        border-radius: 50%;
+        width: 3.6rem;
+        align-self: center center;
+        transition: all 0.2s ease-in-out;
+        cursor: crosshair;
+        &:hover {
+          transform: scale(1.3);
+        }
+        &:active {
+          background-color: darken($cor-verde-secundaria, 10%);
+          transform: scale(1.2);
+        }
+      }
+    }
+    .tema {
+      @include controles;
+
+      & img {
+        background-color: black;
+        transition: transform 3s ease-in-out;
+        &:hover {
+          transform: rotate(720deg) scale(1.5);
+        }
+        &:active {
+          background-color: $cor-verde-primaria;
+        }
+      }
+    }
+
+    .github {
+      @include controles;
+      & img {
+        background-color: black;
+        &:hover {
+          transform: scale(1.5);
+          transition: transform 0.5s ease-in-out;
+          &:active {
+            background-color: $cor-verde-primaria;
+          }
+        }
+      }
+    }
+
+    .cafe {
+      @include controles;
+      & img {
+        background-color: black;
+        &:hover {
+          transform: scale(1.5);
+          transition: transform 0.5s ease-in-out;
+        }
+        &:active {
+          background-color: $cor-verde-primaria;
+        }
+      }
+    }
+    .chat {
+      @include controles;
+      top: 0;
+      right: 20rem;
+      & img {
+        color: white;
+        background-color: black;
+        &:hover {
+          transform: scale(1.5);
+          transition: transform 0.5s ease-in-out;
+        }
+        &:active {
+          background-color: $cor-verde-primaria;
+        }
+      }
+    }
+  }
+
+  .acima {
+    @include caixa-flex--center;
+    background: #ffffff;
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    bottom: -2rem;
+    right: 12rem;
+    margin: 1rem;
+    z-index: 999;
+    border-radius: 0.4rem;
+  }
+}

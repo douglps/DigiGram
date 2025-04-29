@@ -1,12 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -18,21 +20,17 @@
 }
 
 * {
-  font-family: "Blogger", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   letter-spacing: 0.3rem;
-  z-index: 10;
 }
 
 html {
   font-size: 62.5%;
-  user-select: none;
-  max-width: 100%;
 }
 @media (min-width: 75.0625em) {
   html {
@@ -76,10 +74,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   flex-direction: column;
-}
-
-p {
-  font-family: "Nauman";
+  user-select: none;
+  font-size: 1.5rem;
 }
 
 img {
@@ -137,23 +133,13 @@ img {
   left: 0;
   z-index: 101;
 }
-.cabecalho .control {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row-reverse;
-  gap: 1rem;
-  z-index: 102;
-}
 .cabecalho .tema {
-  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(1.5rem);
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 0 50% 50%;
+  border-radius: 50% 0 0% 50%;
   width: 5rem;
   height: 5rem;
   flex-direction: row-reverse;
@@ -178,13 +164,12 @@ img {
   background-color: #11f041;
 }
 .cabecalho .github {
-  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(1.5rem);
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 0 50% 50%;
+  border-radius: 50% 0 0% 50%;
   width: 5rem;
   height: 5rem;
   flex-direction: row-reverse;
@@ -209,13 +194,12 @@ img {
   background-color: #11f041;
 }
 .cabecalho .cafe {
-  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(1.5rem);
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 0 50% 50%;
+  border-radius: 50% 0 0% 50%;
   width: 5rem;
   height: 5rem;
   flex-direction: row-reverse;
@@ -240,13 +224,12 @@ img {
   background-color: #11f041;
 }
 .cabecalho .chat {
-  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(1.5rem);
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 0 50% 50%;
+  border-radius: 50% 0 0% 50%;
   width: 5rem;
   height: 5rem;
   flex-direction: row-reverse;
@@ -272,17 +255,17 @@ img {
   background-color: #11f041;
 }
 .cabecalho__logo--img {
-  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(1.5rem);
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
+  width: 6rem;
+  height: 6rem;
   will-change: filter;
   transition: filter 1600ms;
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin: 0.5rem;
+  margin: 0.5rem 0 0 2rem;
   z-index: 100;
 }
 .cabecalho__logo--img:hover {
@@ -305,13 +288,13 @@ img {
 }
 
 .botao {
-  background-color: #ff8400;
+  background-color: rgb(255, 156.6, 51);
   color: black;
   font-weight: 700;
   font-family: "Blenda";
   border-radius: 3rem;
   transition: 0.15s ease-in-out;
-  border: 0.2rem solid rgba(255, 251, 251, 0.4117647059);
+  border: 0.2rem solid rgb(244.8, 126.72, 0);
   padding: 0.5rem 1.5rem;
   margin: 0 1rem;
   align-self: center;
@@ -378,8 +361,7 @@ img {
 }
 
 .menu {
-  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(1.5rem);
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -399,9 +381,9 @@ img {
   align-items: center;
 }
 .menu-up a {
-  font-family: "Antonio", Arial, Helvetica, sans-serif;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .menu-up--botoes {
   margin: 0 1rem;
@@ -409,9 +391,10 @@ img {
 
 .digitador {
   font-family: "Hero";
-  font-size: 2rem;
-  font-weight: 600;
-  color: #11f041;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #6811f0;
+  background-color: black;
 }
 
 .blinking-cursor {
@@ -479,14 +462,14 @@ img {
 }
 h1 {
   font-family: "Kabur", cursive;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   line-height: 1.2;
   font-weight: 100;
 }
 
 h2 {
   font-family: "Shmooper ", cursive;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 400;
   text-shadow: 1px 1px 1px #a7a7a7, 0 0 1em #5e5913, 0 0 0.2em #121212;
 }
@@ -494,7 +477,7 @@ h2 {
 h3 {
   font-family: "Cal Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 /**
@@ -519,11 +502,13 @@ a {
   padding: 0 1rem;
   border: solid 0.2rem transparent;
   border-radius: 1rem;
+  border: solid 0.2rem black;
+  border-width: 0 0 0 0.2rem;
 }
 .menu a:hover {
   text-decoration: none;
   border: solid 0.2rem #11f041;
-  border-width: 0 0.2rem;
+  border-width: 0 0 0 0.2rem;
 }
 .menu a:active {
   color: #ff8400;
@@ -541,7 +526,7 @@ p {
 }
 
 .portfolio {
-  width: 95%;
+  width: 80%;
 }
 .portfolio--img {
   display: flex;
@@ -549,6 +534,8 @@ p {
   justify-content: center;
   align-items: center;
   margin: 1rem;
+  overflow: hidden;
+  height: 30%;
 }
 .portfolio--img a {
   overflow: hidden;
@@ -561,7 +548,7 @@ p {
 .grid--portfolio {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3rem;
-  row-gap: 4rem;
+  row-gap: 2rem;
   align-items: center;
   justify-content: center;
 }
@@ -574,7 +561,7 @@ p {
 }
 
 .img-aleatoria {
-  grid-column: 3/span 2;
+  grid-column: 3/span 3;
   grid-row: 1/span 2;
 }
 
@@ -599,7 +586,7 @@ p {
   transform: translate(-0.1rem, -0.1rem);
 }
 .botoes:active {
-  background: linear-gradient #ff8400, #532b00;
+  background: linear-gradient(#ff8400, #532b00);
   transform: translate(0rem, 0.1rem);
   box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5) !important;
   transition: 0.01s ease-in-out;
@@ -654,6 +641,179 @@ p {
   width: 100dvw;
 }
 
+.control__container .control__aside {
+  position: fixed;
+  right: 0rem;
+  top: 0rem;
+  display: flex;
+  flex-direction: column;
+  width: 3.5em;
+  height: auto;
+  align-items: end;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  z-index: 999;
+}
+.control__container .control__aside .botao-plus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(1.5rem);
+  border-radius: 5rem 0 0 5rem;
+  width: 5rem;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.control__container .control__aside .botao-plus img {
+  background-color: black;
+  border-radius: 50%;
+  width: 3.6rem;
+  align-self: center center;
+  transition: all 0.2s ease-in-out;
+  cursor: crosshair;
+}
+.control__container .control__aside .botao-plus img:hover {
+  transform: scale(1.3);
+}
+.control__container .control__aside .botao-plus img:active {
+  background-color: rgb(45.4545454545, 79.5454545455, 52.5568181818);
+  transform: scale(1.2);
+}
+.control__container .control__aside .tema {
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% 0 0% 50%;
+  width: 5rem;
+  height: 5rem;
+  flex-direction: row-reverse;
+  z-index: 102;
+  cursor: pointer;
+}
+.control__container .control__aside .tema img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.control__container .control__aside .tema img {
+  background-color: black;
+  transition: transform 3s ease-in-out;
+}
+.control__container .control__aside .tema img:hover {
+  transform: rotate(720deg) scale(1.5);
+}
+.control__container .control__aside .tema img:active {
+  background-color: #11f041;
+}
+.control__container .control__aside .github {
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% 0 0% 50%;
+  width: 5rem;
+  height: 5rem;
+  flex-direction: row-reverse;
+  z-index: 102;
+  cursor: pointer;
+}
+.control__container .control__aside .github img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.control__container .control__aside .github img {
+  background-color: black;
+}
+.control__container .control__aside .github img:hover {
+  transform: scale(1.5);
+  transition: transform 0.5s ease-in-out;
+}
+.control__container .control__aside .github img:hover:active {
+  background-color: #11f041;
+}
+.control__container .control__aside .cafe {
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% 0 0% 50%;
+  width: 5rem;
+  height: 5rem;
+  flex-direction: row-reverse;
+  z-index: 102;
+  cursor: pointer;
+}
+.control__container .control__aside .cafe img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.control__container .control__aside .cafe img {
+  background-color: black;
+}
+.control__container .control__aside .cafe img:hover {
+  transform: scale(1.5);
+  transition: transform 0.5s ease-in-out;
+}
+.control__container .control__aside .cafe img:active {
+  background-color: #11f041;
+}
+.control__container .control__aside .chat {
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% 0 0% 50%;
+  width: 5rem;
+  height: 5rem;
+  flex-direction: row-reverse;
+  z-index: 102;
+  cursor: pointer;
+  top: 0;
+  right: 20rem;
+}
+.control__container .control__aside .chat img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.control__container .control__aside .chat img {
+  color: white;
+  background-color: black;
+}
+.control__container .control__aside .chat img:hover {
+  transform: scale(1.5);
+  transition: transform 0.5s ease-in-out;
+}
+.control__container .control__aside .chat img:active {
+  background-color: #11f041;
+}
+.control__container .acima {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  bottom: -2rem;
+  right: 12rem;
+  margin: 1rem;
+  z-index: 999;
+  border-radius: 0.4rem;
+}
+
 @font-face {
   font-family: "Shmooper";
   src: url("src/fonts/Shmooper.ttf") format("truetype");
@@ -680,14 +840,14 @@ p {
 }
 h1 {
   font-family: "Kabur", cursive;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   line-height: 1.2;
   font-weight: 100;
 }
 
 h2 {
   font-family: "Shmooper ", cursive;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 400;
   text-shadow: 1px 1px 1px #a7a7a7, 0 0 1em #5e5913, 0 0 0.2em #121212;
 }
@@ -695,56 +855,12 @@ h2 {
 h3 {
   font-family: "Cal Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 2.4rem;
-}
-
-.hero {
-  display: inline-flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 15rem;
-}
-.hero__container-text {
-  font-family: "Genos";
   font-size: 2rem;
-  font-weight: 400;
-  line-height: 2.4rem;
-  text-align: center;
-  margin-top: 5rem;
-  padding: 1.5rem;
-  text-align: justify;
-  text-align-last: right;
-  text-indent: 5%;
-}
-.hero__container {
-  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(1.5rem);
-  border-radius: 0.4rem;
-  display: inline-flex;
-  justify-content: center;
-  width: 93%;
-  gap: 2rem;
-}
-.hero__container--highlight {
-  display: flexbox;
-  font-weight: 600;
-  text-shadow: 0 0 2px #a7a7a7, 0 0 1em #474412, 0 0 0.2em #121212;
-  font-variant: small-caps;
-  font-size: 2.4rem;
-}
-.hero__container2 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 32rem;
-  min-width: 55%;
-  margin: 3rem 2rem;
-  letter-spacing: 0.4rem;
 }
 
 .dobra {
   position: absolute;
-  top: 0;
+  top: 6.5rem;
   left: 0;
   width: 50rem;
   height: 50rem;
@@ -752,18 +868,74 @@ h3 {
   z-index: -1;
 }
 
-.maior-que {
+.hero .me__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  align-content: flex-start;
+  margin: 6rem 0 0 4rem;
+  min-width: 10rem;
+  max-width: 30rem;
+}
+.hero .me__container--foto {
+  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
+  font-family: "Arizonia", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-left: 3.5rem;
+  padding: 0 2rem;
+}
+.hero .dev {
+  font-family: "Genos", monospace;
+  font-size: 1.8rem;
+  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
+  padding: 0 1.8rem 0 1.8rem;
+  margin-left: 3.5rem;
+}
+.hero .maior-que {
   position: absolute;
   width: 8rem;
-  top: 0rem;
-  right: 3rem;
+  bottom: 8rem;
+  right: -2rem;
 }
-
-.me_container {
-  margin-top: 8rem;
+.hero__container {
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.6705882353);
+  height: 50rem;
+  margin-top: 6.5rem;
 }
-.me_container img {
-  width: 100%;
+.hero__container--highlight {
+  display: inline;
+  font-weight: 600;
+  text-shadow: 0 0 2px #a7a7a7, 0 0 1em #474412, 0 0 0.2em #121212;
+  font-variant: small-caps;
+  font-size: 1.6rem;
+}
+.hero__container2 {
+  display: flex;
+  flex-direction: column;
+  min-width: 32rem;
+  margin: 3rem 2rem;
+  letter-spacing: 0.4rem;
+}
+.hero__container-text {
+  font-family: "Lato";
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-align: center;
+  display: inline;
+  flex-direction: column;
+  padding: 1.5rem;
+  letter-spacing: 0.4rem;
+  text-align: justify;
+  text-align-last: right;
+  text-indent: 5%;
+  width: 95%;
 }
 
 @keyframes rotate {
@@ -805,13 +977,13 @@ h3 {
   text-align: left;
 }
 .msg-cta--btn {
-  background-color: #ff8400;
+  background-color: rgb(255, 156.6, 51);
   color: black;
   font-weight: 700;
   font-family: "Blenda";
   border-radius: 3rem;
   transition: 0.15s ease-in-out;
-  border: 0.2rem solid rgba(255, 251, 251, 0.4117647059);
+  border: 0.2rem solid rgb(244.8, 126.72, 0);
   padding: 0.5rem 1.5rem;
   margin: 0 1rem;
   align-self: center;
@@ -907,7 +1079,7 @@ h3 {
   align-items: center;
   background-color: black;
   width: 88%;
-  height: 18rem;
+  height: 12rem;
   margin: 3rem;
   padding: 2.5rem;
   text-align: left;
@@ -935,6 +1107,7 @@ h3 {
   gap: 2rem;
   width: 100%;
   justify-content: space-evenly;
+  font-weight: 300;
   cursor: pointer;
 }
 .abas__container--back, .abas__container--front, .abas__container--ux_ui, .abas__container--ferramentas {
@@ -999,8 +1172,26 @@ h3 {
   height: auto;
 }
 .skills__container {
+  box-shadow: inset 0rem 0rem 0rem 40rem rgba(207, 207, 207, 0.06);
+  border: none;
+  backdrop-filter: blur(1.5rem);
   display: flex;
   cursor: grabbing;
+  height: 30rem;
+  align-items: center;
+  padding: 8rem;
+}
+.skills__container--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.795);
+  padding: 3rem 1rem 1rem 1rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 1.5rem 0.2rem #633e9b;
+  min-width: 12rem;
+  min-height: 18rem;
 }
 .skills-icon--fundo-animado {
   border-radius: 50%;
@@ -1022,7 +1213,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.52);
+  box-shadow: inset 0rem 0rem 9rem 30rem rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(1.5rem);
   width: 6rem;
   height: 6rem;
@@ -1037,6 +1228,11 @@ h3 {
   align-items: center;
   flex-direction: column;
   color: #000;
+}
+.skill--nome {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 9rem;
 }
 
 #npm,
@@ -1053,9 +1249,6 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0rem 0rem 0rem 40rem rgba(207, 207, 207, 0.06);
-  border: none;
-  backdrop-filter: blur(1.5rem);
   flex-direction: column;
   padding: 2.5rem;
 }
@@ -1064,12 +1257,10 @@ h3 {
 .ux-ui__container--content,
 .ferramentas__container--content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   background-color: rgba(255, 255, 255, 0.795);
-  gap: 3rem;
+  gap: 5rem;
   margin: 2rem;
   border-radius: 0.5rem;
   padding: 2rem;
@@ -1083,12 +1274,111 @@ h3 {
   margin-top: 2rem;
 }
 
+.elevator__titulo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 4rem;
+}
+.elevator__span {
+  font-family: "Kabur";
+  font-weight: 600;
+  text-shadow: 0.1rem -0.2rem 0.4rem #633e9b;
+  font-size: 5rem;
+  color: #ff8400;
+}
+.elevator__faixa--1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #ff8400;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 6rem;
+  transform: rotate(1deg);
+}
+.elevator__faixa--2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #6811f0;
+  top: 2rem;
+  left: 0rem;
+  width: 100%;
+  height: 4rem;
+  transform: rotate(2.5deg);
+}
+.elevator__faixa--3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #40704a;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 6rem;
+  transform: rotate(-3deg);
+}
+.elevator__faixa--texto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 2.3rem;
+  top: -0.5rem;
+  left: 0rem;
+  width: 100%;
+  z-index: 50;
+  transform: rotate(357deg);
+  gap: 1.8rem;
+}
+.elevator__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 6rem 6rem 6rem;
+}
+.elevator__texto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12rem;
+  text-indent: 3rem;
+  text-align: justify;
+  padding: 3rem;
+  max-width: 100%;
+}
+.elevator--img-aside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 60%;
+  max-height: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0.5rem 0.5rem 1rem 0.1rem #ff8400;
+  align-self: center;
+}
+
 .footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: #000;
 }
 
 .rodape__container {
@@ -1099,7 +1389,6 @@ h3 {
   flex-direction: column;
 }
 .rodape__cta {
-  margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1107,16 +1396,17 @@ h3 {
   width: 100%;
   padding: 0.5rem 0;
   border-radius: 1rem;
+  margin-top: 1rem;
   color: #000;
 }
 .rodape__cta a {
-  background-color: #ff8400;
+  background-color: rgb(255, 156.6, 51);
   color: black;
   font-weight: 700;
   font-family: "Blenda";
   border-radius: 3rem;
   transition: 0.15s ease-in-out;
-  border: 0.2rem solid rgba(255, 251, 251, 0.4117647059);
+  border: 0.2rem solid rgb(244.8, 126.72, 0);
   padding: 0.5rem 1.5rem;
   margin: 0 1rem;
   align-self: center;
@@ -1182,13 +1472,13 @@ h3 {
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
-  margin: 5rem 0 3rem 0;
+  margin: 2rem 0 2rem 0;
   gap: 2rem;
 }
 .social__container img {
   border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: #000;
   border: 0.2rem solid black;
   transition: 0.5s ease-in-out;
@@ -1229,19 +1519,6 @@ h3 {
 
 .copyright {
   margin-bottom: 3rem;
-}
-
-#me {
-  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
-  font-family: "Arizonia", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  padding: 2rem;
-}
-
-#dev {
-  font-family: "Genos", monospace;
-  font-size: 1.8rem;
-  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
-  padding: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

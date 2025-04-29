@@ -23,12 +23,14 @@ a {
   padding: 0 1rem;
   border: solid 0.2rem transparent;
   border-radius: 1rem;
+  border: solid 0.2rem black;
+  border-width: 0 0 0 0.2rem;
   &:hover {
     text-decoration: none;
     // color: lighten($cor-roxa-primaria, 35%);
     // text-decoration-color: $cor-roxa-primaria;
     border: solid 0.2rem $cor-verde-primaria;
-    border-width: 0 0.2rem;
+    border-width: 0 0 0 0.2rem;
     // text-decoration-thickness: 0.3rem;
     // text-underline-offset: 0.6rem;
   }

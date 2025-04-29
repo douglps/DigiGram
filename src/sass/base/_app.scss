@@ -23,20 +23,17 @@
 }
 
 * {
-  font-family: "Blogger", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   letter-spacing: 0.3rem;
-  z-index: 10;
 }
 
 html {
   font-size: 62.5%;
-
   @include respond(xxl) {
     font-size: 68.75%;
   }
@@ -54,9 +51,6 @@ html {
   @include respond(sm) {
     font-size: 50%;
   }
-
-  user-select: none;
-  max-width: 100%;
 }
 
 body {
@@ -65,11 +59,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
   flex-direction: column;
+  user-select: none;
+  font-size: 1.5rem;
 }
 
-p {
-  font-family: "Nauman";
-}
+// p {
+//   font-family: "Nauman";
+// }
 
 img {
   max-width: 100%;
@@ -125,16 +121,6 @@ img {
   top: 0;
   left: 0;
   z-index: 101;
-
-  .control {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-    gap: 1rem;
-    z-index: 102;
-  }
 
   .tema {
     @include controles;
@@ -204,14 +190,14 @@ img {
   &__logo--img {
     @include fundo-transparente--pr;
     border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
+    width: 6rem;
+    height: 6rem;
     will-change: filter;
     transition: filter 1600ms;
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin: 0.5rem;
+    margin: 0.5rem 0 0 2rem;
     z-index: 100;
 
     &:hover {
@@ -242,7 +228,7 @@ img {
 }
 
 .menu {
-  @include fundo-transparente--pr;
+  background-color: black;
   @include caixa-flex--center;
   border-radius: 5rem;
   padding: 1rem 2rem;
@@ -258,9 +244,9 @@ img {
     font-size: 1.8rem;
     align-items: center;
     & a {
-      font-family: "Antonio", Arial, Helvetica, sans-serif;
+      font-family: "Outfit", Arial, Helvetica, sans-serif;
       font-weight: 400;
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
 
     &--botoes {
@@ -272,9 +258,10 @@ img {
 // digitador
 .digitador {
   font-family: "Hero";
-  font-size: 2rem;
-  font-weight: 600;
-  color: $cor-verde-primaria;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $cor-roxa-primaria;
+  background-color: black;
 }
 
 .blinking-cursor {

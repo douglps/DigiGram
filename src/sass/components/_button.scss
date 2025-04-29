@@ -25,7 +25,7 @@
   }
 
   &:active {
-    background: linear-gradient#ff8400, #532b00;
+    background: linear-gradient(#ff8400, #532b00);
     transform: translate(0rem, 0.1rem);
     box-shadow: 0rem 0.2rem 0.2rem 0.1rem rgba(rgba(0, 0, 0, 0.966), 0.5) !important;
     transition: 0.01s ease-in-out;
