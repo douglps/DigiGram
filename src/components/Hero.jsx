@@ -25,7 +25,10 @@ export function Hero() {
               alt="Avatar de Douglas Lopes"
             />
             <div className="maior-que">
-              <img src="src/assets/images/code-3maior-que.png" alt="" />
+              <img
+                src="src/assets/images/compressed_images/code-3maior-que-min.png"
+                alt=""
+              />
             </div>
           </div>
           <div className="dev">
@@ -43,12 +46,12 @@ export function Hero() {
               <span className="hero__container--highlight">
                 Cada projeto é um convite à expressão
               </span>{" "}
-              — onde a estética encontra a estrutura, e a interação ganha alma.
+              - onde a estética encontra a estrutura, e a interação ganha alma.
               Cores, formas, emoções e intenções se traduzem em telas que
               respondem, comunicam e provocam. Este é o espaço onde o código se
               transforma em sensação.{" "}
               <span className="hero__container--highlight">
-                Continue, e descubra até onde podemos ir.
+                Continue e descubra até onde podemos ir.
               </span>
             </p>
           </div>

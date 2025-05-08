@@ -1,0 +1,14 @@
+@import "../abstracts/mixins.scss";
+
+.lab {
+  @include fundo-transparente--br;
+  width: 30rem;
+  height: 30rem;
+  margin: 3rem;
+}
+
+.meu3d {
+  @include caixa-flex--center;
+  align-items: center;
+  height: 28rem;
+}

@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { Autoplay, Navigation, Scrollbar, A11y } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-
 import "swiper/css/scrollbar";
 
 export function Skills() {
@@ -122,13 +120,13 @@ export function Skills() {
           className="abas__container--back"
           onClick={() => handleButtonClick(1)}
         >
-          Back-End
+          BACK-END
         </div>
         <div
           className="abas__container--front"
           onClick={() => handleButtonClick(2)}
         >
-          Front-End
+          FRONT-END
         </div>
         <div
           className="abas__container--ux_ui"
@@ -229,6 +227,7 @@ export function Skills() {
                         className="skills-icon"
                         src={skill.src}
                         alt={skill.alt}
+                        loading="lazy"
                       />
                     </div>
                   </div>

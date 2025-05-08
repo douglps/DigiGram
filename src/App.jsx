@@ -1,30 +1,34 @@
-import { useState } from "react";
+import React, { Suspense } from "react";
 import { Control } from "./components/Control";
 import { Cabecalho } from "./components/Cabecalho";
 import { Hero } from "./components/Hero";
-import { ElevatorPitch } from "./components/ElevatorPitch";
-import { Portfolio } from "./components/Portfolio";
 import { Skills } from "./components/Skills";
 import "./styles/style.css";
 import { Terminal } from "./components/Terminal";
-import { Footer } from "./layouts/Footer";
+
+import { LazyLoadProvider } from "./components/LazyLoadContext";
+import { LazyLoadSection } from "./components/LazyLoadSection";
+
+const ElevatorPitch = React.lazy(() => import("./components/ElevatorPitch"));
+const Portfolio = React.lazy(() => import("./components/Portfolio"));
+const Footer = React.lazy(() => import("./layouts/Footer"));
 
 function App() {
-  useState();
   return (
-    <div className="App">
-      <Cabecalho />
-      <Control />
-      <Hero />
-      <Terminal />
-      <div>lazing page</div>
-      <Skills />
-      <ElevatorPitch />
-      {/* Sessão “Processo de Trabalho” */}
-      <Portfolio />
-      {/* Sessão “Depoimentos” //“Resumo Profissional” em PDF. */}
-      <Footer />
-    </div>
+    <LazyLoadProvider>
+      <div className="App">
+        <Cabecalho />
+        <Control />
+        <Hero />
+        <Terminal />
+        <Skills />
+        <LazyLoadSection Component={ElevatorPitch} index={0} />
+        <LazyLoadSection Component={Portfolio} index={1} />
+        <LazyLoadSection Component={Footer} index={2} />
+        {/* Sessão “Processo de Trabalho” */}
+        {/* Sessão “Depoimentos” //“Resumo Profissional” em PDF. */}
+      </div>
+    </LazyLoadProvider>
   );
 }
 

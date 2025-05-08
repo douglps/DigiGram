@@ -1,39 +1,113 @@
 @import "../abstracts/mixins.scss";
+@import "../abstracts/variables.scss";
+
+.meu-portfolio {
+  @include caixa-flex--center;
+  @include fundo-transparente--pr;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 5rem;
+  &__skills {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 1rem 1rem;
+  }
+}
 
 .portfolio {
-  width: 80%;
+  width: 100%;
+  background-image: url(src/assets/images/bg-vd-roxo-pr.png);
+
+  &--titulo {
+    font-size: 2rem;
+  }
 
   &--img {
     @include caixa-flex--center;
     margin: 1rem;
     overflow: hidden;
-    height: 30%;
-
+    height: 40rem;
+    min-width: 20rem;
+    border-radius: 1rem 0.4rem 1rem 0;
     & a {
       overflow: hidden;
-      border-radius: 1rem;
     }
   }
+  &--texto {
+    @include fundo-transparente--pr;
+    text-align: justify;
+    text-indent: 2rem;
+    padding: 2rem;
+    min-width: 30rem;
+    grid-column: 2 / -1;
+  }
+}
+.overlay {
+  @include fundo-transparente--pr;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
 }
 
 .grid {
-  display: grid;
+  position: relative;
+  width: 90%;
+  border: 0.1rem solid $cor-verde-primaria;
 
   &--portfolio {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
     column-gap: 3rem;
     row-gap: 2rem;
-    align-items: center;
-    justify-content: center;
+    place-items: center;
   }
 
   & img {
     display: block;
+    transition: transform 0.3s ease-in-out;
     &:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease-in-out;
+      transform: scale(1.2);
     }
   }
+  &__portfolio--skills {
+    display: grid;
+    width: 100%;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    & img {
+      margin: 1rem;
+    }
+  }
+}
+
+.cabecalho__skills {
+  @include caixa-flex--center;
+  @include fundo-transparente--pr;
+  margin-top: 2rem;
+}
+
+.skill-portfolio {
+  @include caixa-flex--center;
+  align-self: center;
+  max-width: 3rem;
+  min-width: 2rem;
 }
 
 .img-aleatoria {

@@ -1,35 +1,90 @@
 @import "../abstracts/_mixins.scss";
 @import "../abstracts/_variables.scss";
+
 .control__container {
   .control__aside {
     position: fixed;
-    right: 0rem;
-    top: 0rem;
+    // A barra lateral já fica na posição visível desejada
+    right: 0rem; // Ajuste este valor se a posição final for diferente
+    top: 0rem; // Mantenha a posição top
     display: flex;
     flex-direction: column;
-    width: 3.5em;
-    height: auto;
+    width: 5rem; // A largura do container
+    height: auto; // A altura se ajusta ao conteúdo visível
     align-items: end;
-    justify-content: space-around;
+    // O gap define o espaçamento quando os elementos estão visíveis
     gap: 2rem;
     padding: 1.5rem 0;
     z-index: 999;
+    // REMOVA a transição para a propriedade 'right', o container não desliza
+    // transition: right 0.5s ease-in-out;
 
+    // Estilos para os botões que NÃO são o .botao-plus (estado inicial oculto)
+    > div:not(.botao-plus) {
+      opacity: 0; // Começa invisível
+      // Mantenha a transformação para fazê-los "sair" de algum lugar
+      // translateX(50px) faz eles virem da direita
+      // translateY(-100%) faria eles virem de "cima" (sob o botão plus) - ajuste conforme o efeito desejado
+      transform: translateX(50px);
+      // Adiciona transições para as propriedades que serão animadas
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      transition-delay: 0s; // Atraso inicial (será sobrescrito quando menu-open)
+      // Adicione talvez max-height/overflow hidden se eles causarem problemas de layout/clique no estado inicial
+      // max-height: 0;
+      // overflow: hidden;
+    }
+
+    // O botao-plus não precisa de estilos especiais no estado aberto/fechado aqui,
+    // pois ele não muda de lugar dentro do container fixed.
+
+    // Estado quando o menu está aberto (a classe 'menu-open' está presente)
+    &.menu-open {
+      // A propriedade 'right' não precisa ser alterada aqui, pois já está fixa acima
+
+      // Estilos para os botões que NÃO são o .botao-plus quando menu está aberto
+      > div:not(.botao-plus) {
+        opacity: 1; // Torna-se visível
+        transform: translateX(
+          0
+        ); // Move para a posição final (determinada pelo flexbox/gap)
+        // Se usou max-height/overflow, adicione aqui
+        // max-height: 100px; // Ou um valor grande o suficiente
+
+        // Aplica atrasos escalonados para a aparição sequencial
+        // :nth-child(n) seleciona o n-ésimo filho direto.
+        // Como .botao-plus é o 1º, .tema é o 2º, .github é o 3º, etc.
+        &:nth-child(2) {
+          transition-delay: 0.1s;
+        } // Botão .tema
+        &:nth-child(3) {
+          transition-delay: 0.3s;
+        } // Botão .github
+        &:nth-child(4) {
+          transition-delay: 0.5s;
+        } // Botão .cafe
+        &:nth-child(5) {
+          transition-delay: 0.7s;
+        } // Botão .chat
+      }
+    }
+
+    // Estilos existentes para o .botao-plus (mantenha-os)
     .botao-plus {
       @include caixa-flex--center;
       @include fundo-transparente--pr;
       border-radius: 5rem 0 0 5rem;
-      width: 5rem;
+      width: 10rem;
       height: 5rem;
-      justify-content: center;
+      padding-left: 0.5rem;
+      justify-content: left;
       align-items: center;
+      align-self: flex-start;
       & img {
         background-color: black;
         border-radius: 50%;
         width: 3.6rem;
         align-self: center center;
         transition: all 0.2s ease-in-out;
-        cursor: crosshair;
         &:hover {
           transform: scale(1.3);
         }
@@ -39,9 +94,9 @@
         }
       }
     }
+    // Mantenha os estilos existentes para .tema, .github, .cafe, .chat (hovers, etc.)
     .tema {
       @include controles;
-
       & img {
         background-color: black;
         transition: transform 3s ease-in-out;
@@ -53,12 +108,12 @@
         }
       }
     }
-
     .github {
       @include controles;
       & img {
         background-color: black;
         &:hover {
+          cursor: pointer;
           transform: scale(1.5);
           transition: transform 0.5s ease-in-out;
           &:active {
@@ -67,7 +122,6 @@
         }
       }
     }
-
     .cafe {
       @include controles;
       & img {
@@ -86,7 +140,6 @@
       top: 0;
       right: 20rem;
       & img {
-        color: white;
         background-color: black;
         &:hover {
           transform: scale(1.5);
@@ -99,6 +152,7 @@
     }
   }
 
+  // Estilos existentes para o botão "acima"
   .acima {
     @include caixa-flex--center;
     background: #ffffff;

@@ -1,35 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
-@font-face {
-  font-family: "Shmooper";
-  src: url("src/fonts/Shmooper.ttf") format("truetype");
-} // h1
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"); // h2
-@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap"); // h3
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"); // menu
-@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap"); //I Do
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@font-face {
-  font-family: "Kabur";
-  src: url("src/fonts/kabur-kvajp.otf") format("opentype");
-}
-@font-face {
-  font-family: "Hero";
-  src: url("src/fonts/Hero-Regular.otf") format("opentype");
-}
-@font-face {
-  font-family: "Blogger";
-  src: url("src/fonts/BloggerSans-Light-BF675a632080dd7.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Blenda";
-  src: url("src/fonts/Blenda Script.otf") format("opentype");
-}
-@font-face {
-  font-family: "Nauman";
-  src: url("src/fonts/Nauman-Regular.ttf") format("truetype");
-}
 
 @mixin texto($familia, $tamanho, $peso, $altura) {
   font-family: $familia;
@@ -40,21 +13,18 @@
 }
 
 h1 {
-  font-family: "Kabur", cursive;
   font-size: 2.8rem;
   line-height: 1.2;
   font-weight: 100;
 }
 
 h2 {
-  font-family: "Shmooper ", cursive;
   font-size: 2.4rem;
   font-weight: 400;
   text-shadow: 1px 1px 1px #a7a7a7, 0 0 1em #5e5913, 0 0 0.2em #121212;
 }
 
 h3 {
-  font-family: "Cal Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 2rem;
 }

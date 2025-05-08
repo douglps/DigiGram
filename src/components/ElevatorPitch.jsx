@@ -1,28 +1,38 @@
-export function ElevatorPitch() {
+export default function ElevatorPitch() {
   return (
     <section className="elevator-pitch">
       <div className="elevator-pitch__container">
-        <div className="elevator-pitch__container--text">
-          <div className="elevator__titulo">
-            <div className="elevator__faixa--1"></div>
-            <div className="elevator__faixa--2"></div>
-            <div className="elevator__faixa--3"></div>
-            <div className="elevator__faixa--texto">
-              Leve <span className="elevator__span"> Sua Marca </span> para o{" "}
-              <span className="elevator__span"> mundo online!</span>
-            </div>
+        <div className="elevator__titulo">
+          <div className="elevator__faixa--1"></div>
+          <div className="elevator__faixa--2"></div>
+          <div className="elevator__faixa--3"></div>
+          <div className="elevator__faixa--texto">
+            Leve <span className="elevator__span"> Sua Marca </span> para o{" "}
+            <span className="elevator__span"> mundo online!</span>
           </div>
+        </div>
+        <div className="elevator--img-aside">
+          <img
+            src="src/assets/images/compressed_images/imagem1-min.png"
+            alt="Imagem de uma pessoa observando o portfólio de um artista"
+            loading="lazy"
+          />
+        </div>
+        <div className="elevator-pitch__container--text">
           <div className="elevator__content">
             <div className="elevator__texto">
-              <p>
+              <p className="pergunta">
                 Quer um espaço para contar a sua história, apresentar sua marca
-                ao mundo, expor seu trabalho ou sua arte? Contribuo para que
-                você dê o próximo passo com confiança: desenvolvo sites que
-                mostram ao mundo quem você é, com design marcante, estrutura
-                estratégica e tecnologia que trabalha por você. Mais do que um
-                endereço na web, seu site será a vitrine viva da sua marca, o
-                espaço onde suas ideias ganham forma e alcançam pessoas de
-                verdade.
+                ao mundo, expor seu trabalho ou sua arte?
+              </p>
+              <p>
+                {" "}
+                Contribuo para que você dê o próximo passo com confiança:
+                desenvolvo sites que mostram ao mundo quem você é, com design
+                marcante, estrutura estratégica e tecnologia que trabalha por
+                você. Mais do que um endereço na web, seu site será a vitrine
+                viva da sua marca, o espaço onde suas ideias ganham forma e
+                alcançam pessoas de verdade.
               </p>
               <p>
                 Criar um site é construir uma ponte entre você e quem está
@@ -37,9 +47,6 @@ export function ElevatorPitch() {
                 caminho certo para realizar. Vamos conversar e demonstrar como
                 podemos fazer isso acontecer de forma simples e eficaz.
               </p>
-            </div>
-            <div className="elevator--img-aside">
-              <img src="src/assets/images/imagem1.png" alt="" />
             </div>
           </div>
         </div>

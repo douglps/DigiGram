@@ -63,10 +63,6 @@ body {
   font-size: 1.5rem;
 }
 
-// p {
-//   font-family: "Nauman";
-// }
-
 img {
   max-width: 100%;
   height: auto;
@@ -87,20 +83,6 @@ img {
   text-align: center;
   justify-content: center;
   align-items: center;
-}
-
-#logo {
-  filter: hue-rotate(300deg);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-
-  &:hover {
-    transition: filter 1600ms;
-    filter: drop-shadow(0 0 1.5rem $cor-laranja-primaria) hue-rotate(480deg);
-  }
 }
 // -----------------------------------------------------------------------------
 // ****FLEXBOX****
@@ -199,9 +181,10 @@ img {
     padding: 0;
     margin: 0.5rem 0 0 2rem;
     z-index: 100;
+    transition: 4s ease-in-out;
 
     &:hover {
-      filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(360deg);
+      filter: drop-shadow(0 0 1.5rem #bac518) hue-rotate(750deg);
     }
   }
   .navegacao {
@@ -209,7 +192,6 @@ img {
     @include caixa-flex--center;
     height: auto;
     width: 100%;
-    // padding: 0 1rem;
     justify-content: space-between;
     align-items: flex-end;
     overflow: hidden;
@@ -257,16 +239,15 @@ img {
 
 // digitador
 .digitador {
-  font-family: "Hero";
   font-size: 1.6rem;
-  font-weight: 400;
-  color: $cor-roxa-primaria;
+  font-weight: 600;
+  color: $cor-verde-primaria;
   background-color: black;
 }
 
 .blinking-cursor {
-  font-family: "Hero";
-  font-size: 2.5rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2rem;
   animation: blink 1s step-start infinite;
 }
 
@@ -284,8 +265,6 @@ img {
   &skils-icon {
     width: 5rem;
     height: 5rem;
-    overlay: auto;
-    // filter: hue-rotate(160deg) saturate(78%) brightness(1.2);
   }
 }
 .menu-up--botoes {
@@ -302,16 +281,3 @@ img {
     color: #121212;
   }
 }
-
-// @media (prefers-color-scheme: light) {
-//   :root {
-//     color: #213547;
-//     background-color: #ffffff;
-//   }
-//   a:hover {
-//     color: $cor-roxa-primaria;
-//   }
-//   button {
-//     background-color: #f9f9f9;
-//   }
-// }

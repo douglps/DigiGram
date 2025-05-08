@@ -24,15 +24,12 @@
     max-width: 30rem;
     &--foto {
       text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
-      font-family: "Arizonia", "Franklin Gothic Medium", "Arial Narrow", Arial,
-        sans-serif;
       margin-left: 3.5rem;
       padding: 0 2rem;
     }
   }
 
   .dev {
-    font-family: "Genos", monospace;
     font-size: 1.8rem;
     text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
     padding: 0 1.8rem 0 1.8rem;
@@ -47,40 +44,33 @@
   }
 
   &__container {
-    // @include fundo-transparente--pr;
     border-radius: 0.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     background: #000000ab;
-    height: 50rem;
+    height: 45rem;
     margin-top: 6.5rem;
 
     &--highlight {
       display: inline;
 
       font-weight: 600;
-      text-shadow: 0 0 2px #a7a7a7, 0 0 1em #474412, 0 0 0.2em #121212;
-      font-variant: small-caps;
+      text-shadow: 2px 1px 2px #a7a7a7;
       font-size: 1.6rem;
     }
 
     &2 {
       display: flex;
-      flex-direction: column;
       min-width: 32rem;
       margin: 3rem 2rem;
-      letter-spacing: 0.4rem;
     }
   }
 
   &__container-text {
-    @include texto("Lato", 1.4rem, 400, 2.4rem);
     display: inline;
-    flex-direction: column;
     padding: 1.5rem;
-    letter-spacing: 0.4rem;
     text-align: justify;
     text-align-last: right;
     text-indent: 5%;
@@ -98,71 +88,9 @@
   }
 }
 
-.loading {
-  animation: rotate 5s linear;
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  visibility: visible;
-}
-
-.msg-cta {
-  position: relative;
-  background-image: url("src/assets/images/bg/bg-msg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-top: 2rem;
-  padding-left: 3rem;
-  border-radius: 0 0.7rem 0.2rem 0.2rem;
-  max-width: 40rem;
-  height: inherit;
-  visibility: hidden;
-  & p {
-    position: absolute;
-    top: 1rem;
-    color: black;
-    text-align: left;
-  }
-  &--btn {
-    @include botao-classico--vd;
-    position: absolute;
-    bottom: 1rem;
-    width: 60%;
-    margin-top: 2rem;
-  }
-  &-pai {
-    position: relative;
-    background-size: cover;
-    max-width: 40rem;
-    height: 14rem;
-  }
-}
-
-.seta-msg {
-  position: absolute;
-  left: -1rem;
-  top: -0.5rem;
-  width: 1rem;
-  height: 1rem;
-}
-
-.check-all {
-  @include caixa-flex--center;
-  position: absolute;
-  right: 2rem;
-  bottom: 1rem;
-  width: 2rem;
-  height: 2rem;
-}
-
 // TERMINAL *********************************************************
 .terminal {
   display: inline;
-  justify-content: space-between;
   align-items: center;
   background-color: black;
   width: 88%;
@@ -223,7 +151,7 @@
   opacity: 0; /* Inicia transparente */
   padding: 0 2rem; /* Remove padding vertical quando colapsado (ajuste conforme o design) */
   /* Considere também margin-top/bottom se houver */
-  margin: 0 0 0 0; /* Remove margem vertical (ajuste conforme o design) */
+  margin: 0; /* Remove margem vertical (ajuste conforme o design) */
 }
 
 .collapsible.is-open {
@@ -235,6 +163,7 @@
 
 /* Opcional: Estilo para o texto oculto e surgindo */
 .collapsible p {
+  width: 97%;
   /* Estilo para o parágrafo dentro das divs colapsáveis */
   /* Pode adicionar transição específica para a cor ou outros estilos se quiser um fade mais granular */
   transition: color 1s ease-out;
@@ -252,6 +181,13 @@
   background-color: #633e9b52;
 }
 
+.citacao {
+  color: $cor-laranja-primaria;
+  font-weight: 400;
+  text-align: right;
+  margin: 2rem 2rem 0 0;
+}
+
 .skills {
   margin-top: 5rem;
   width: 100%;
@@ -262,7 +198,7 @@
     cursor: grabbing;
     height: 30rem;
     align-items: center;
-    padding: 8rem;
+    padding: 4rem;
     &--content {
       display: flex;
       flex-direction: column;
@@ -314,12 +250,6 @@
   }
 }
 
-#npm,
-#json {
-  background-color: white;
-  border-radius: 50%;
-}
-
 .front-end__container,
 .back-end__container,
 .ux-ui__container,
@@ -342,16 +272,17 @@
   }
 }
 
-.citacao {
-  color: $cor-laranja-primaria;
-  text-align: right;
-  margin-top: 2rem;
-}
-
 // PORIFÓLIO *******************************************************
 // ARQUIVO PROPRIO
 
 // PITCH ELEVATOR *******************************************************
+
+.pergunta {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $cor-laranja-primaria;
+}
+
 .elevator {
   &__titulo {
     @include caixa-flex--center;
@@ -359,10 +290,9 @@
     font-size: 4rem;
   }
   &__span {
-    font-family: "Kabur";
     font-weight: 600;
     text-shadow: 0.1rem -0.2rem 0.4rem $cor-roxa-secundaria;
-    font-size: 5rem;
+    font-size: 4rem;
     color: $cor-laranja-primaria;
   }
 
@@ -402,7 +332,7 @@
     &--texto {
       @include caixa-flex--center;
       position: absolute;
-      font-size: 2.3rem;
+      font-size: 2rem;
       top: -0.5rem;
       left: 0rem;
       width: 100%;
@@ -421,7 +351,7 @@
 
   &__texto {
     @include caixa-flex--center;
-    margin-top: 12rem;
+    margin-top: 8rem;
     text-indent: 3rem;
     text-align: justify;
     padding: 3rem;
@@ -429,13 +359,21 @@
   }
 
   &--img-aside {
+    position: relative;
     @include caixa-flex--center;
-    justify-content: center;
-    max-width: 60%;
-    max-height: 100%;
-    border-radius: 1.5rem;
-    box-shadow: 0.5rem 0.5rem 1rem 0.1rem $cor-laranja-primaria;
-    align-self: center;
+    width: 100%;
+    height: 40rem;
+    box-shadow: 0.5rem 0.5rem 1rem 0.1rem #ff84006b;
+    overflow: hidden;
+    transform: translateY(6rem);
+    z-index: -1;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(0%, 0%);
+    }
   }
 }
 
@@ -508,7 +446,25 @@
   gap: 1.2rem;
 }
 
+.version {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.8rem;
+  width: 95svw;
+}
+
 .copyright {
   margin-bottom: 3rem;
 }
 // ------------------------------------------------------
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
