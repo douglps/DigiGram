@@ -62,7 +62,7 @@ export const LazyLoadSection = ({
           style={{
             height: "300px",
             backgroundColor:
-              "#f0f0f0" /* Adicione estilos para o placeholder */,
+              "#f0f0f011" /* Adicione estilos para o placeholder */,
           }}
         >
           {/* Opcional: Mostrar um indicador leve ou apenas um espaço em branco */}

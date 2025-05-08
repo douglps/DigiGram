@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLazyLoad } from "./LazyLoadContext";
 
 export function Cabecalho() {
   const { lazyLoadAndScrollTo } = useLazyLoad();
 
-  const handleClick = (e, sectionId) => {
+  // Referência para armazenar estado de clique por seção
+  const clickedSections = useRef({});
+
+  const [disabledClicks, setDisabledClicks] = useState({});
+
+  const handleClick = (e, id) => {
     e.preventDefault();
-    lazyLoadAndScrollTo(sectionId);
+
+    if (disabledClicks[id]) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
+    lazyLoadAndScrollTo(id).then(() => {
+      setDisabledClicks((prev) => ({ ...prev, [id]: true }));
+    });
   };
   return (
     <section className="header">
@@ -25,7 +39,11 @@ export function Cabecalho() {
                 <li>
                   <a
                     href="#Portifolio"
-                    onClick={(e) => handleClick(e, "Portifolio")}
+                    onClick={
+                      !disabledClicks["Portifolio"]
+                        ? (e) => handleClick(e, "Portifolio")
+                        : undefined
+                    }
                   >
                     Portifólio
                   </a>
