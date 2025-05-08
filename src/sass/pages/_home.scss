@@ -96,7 +96,7 @@
   width: 88%;
   height: 12rem;
   margin: 3rem;
-  padding: 2.5rem;
+  padding: 1.5rem;
   text-align: left;
   border-radius: 0.5rem;
   border-left: 0.1rem $cor-verde-primaria solid;
@@ -467,4 +467,8 @@
 .fade-in.appear {
   opacity: 1;
   transform: translateY(0);
+}
+
+.lazyloadsection {
+  width: 100%;
 }

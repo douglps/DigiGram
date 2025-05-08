@@ -3,18 +3,12 @@ import { Link } from "react-router-dom";
 import { useLazyLoad } from "./LazyLoadContext";
 
 export function Cabecalho() {
-  const { jumpTo } = useLazyLoad();
+  const { lazyLoadAndScrollTo } = useLazyLoad();
 
-  const handleAnchorClick = (id, index) => {
-    jumpTo(index);
-    setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 500); // ajuste o tempo de acordo com a necessidade
+  const handleClick = (e, sectionId) => {
+    e.preventDefault();
+    lazyLoadAndScrollTo(sectionId);
   };
-
   return (
     <section className="header">
       <div className="cabecalho">
@@ -31,7 +25,7 @@ export function Cabecalho() {
                 <li>
                   <a
                     href="#Portifolio"
-                    onClick={() => handleAnchorClick("Portifolio", 1)}
+                    onClick={(e) => handleClick(e, "Portifolio")}
                   >
                     Portifólio
                   </a>

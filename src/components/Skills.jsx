@@ -210,8 +210,8 @@ export function Skills() {
           slidesPerView={6}
           navigation
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
           loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: true }}
           className="skills-swiper"

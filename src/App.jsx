@@ -5,7 +5,6 @@ import { Hero } from "./components/Hero";
 import { Skills } from "./components/Skills";
 import "./styles/style.css";
 import { Terminal } from "./components/Terminal";
-
 import { LazyLoadProvider } from "./components/LazyLoadContext";
 import { LazyLoadSection } from "./components/LazyLoadSection";
 
@@ -22,11 +21,17 @@ function App() {
         <Hero />
         <Terminal />
         <Skills />
-        <LazyLoadSection Component={ElevatorPitch} index={0} />
-        <LazyLoadSection Component={Portfolio} index={1} />
-        <LazyLoadSection Component={Footer} index={2} />
-        {/* Sessão “Processo de Trabalho” */}
-        {/* Sessão “Depoimentos” //“Resumo Profissional” em PDF. */}
+        <LazyLoadSection
+          Component={ElevatorPitch}
+          index={1}
+          sectionId="ElevatorPitch"
+        />
+        <LazyLoadSection
+          Component={Portfolio}
+          index={2}
+          sectionId="Portifolio"
+        />
+        <LazyLoadSection Component={Footer} index={3} sectionId="Footer" />
       </div>
     </LazyLoadProvider>
   );
