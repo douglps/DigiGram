@@ -32,7 +32,8 @@ export default function Portfolio() {
               {/* Exemplo com placeholder #, ajuste conforme necessário */}
               <img
                 src={thumbPortfolioImage} // Use a variável importada
-                alt="Portifólio" // Considere um alt mais descritivo
+                alt="Miniatura de DigiGram"
+                loading="lazy"
               />
             </a>
           </div>
@@ -52,41 +53,44 @@ export default function Portfolio() {
               </div>
               <div className="grid__portfolio--skills">
                 <div className="skill-portfolio">
-                  <img src={html5Icon} alt="HTML5" />{" "}
+                  <img src={html5Icon} alt="HTML5" loading="lazy" />{" "}
                   {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
-                  <img src={cssIcon} alt="CSS" />{" "}
+                  <img src={cssIcon} alt="CSS" loading="lazy" />{" "}
                   {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
-                  <img src={sassIcon} alt="SASS" />{" "}
+                  <img src={sassIcon} alt="SASS" loading="lazy" />{" "}
                   {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
                   <img
                     src={javascriptIcon} // Use a variável importada
                     alt="JavaScript"
+                    loading="lazy"
                   />
                 </div>
                 <div className="skill-portfolio">
-                  <img src={reactIcon} alt="React" />{" "}
+                  <img src={reactIcon} alt="React" loading="lazy" />{" "}
                   {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
-                  <img src={gitIcon} alt="Git" />{" "}
+                  <img src={gitIcon} alt="Git" loading="lazy" />{" "}
                   {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
                   <img
                     src={windowsIcon} // Use a variável importada
                     alt="Windows"
+                    loading="lazy"
                   />
                 </div>
                 <div className="skill-portfolio">
                   <img
                     src={vscodeIcon} // Use a variável importada
                     alt="Visual Studio Code"
+                    loading="lazy"
                   />
                 </div>
               </div>

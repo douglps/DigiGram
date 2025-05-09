@@ -13,7 +13,7 @@ export default function ElevatorPitch() {
         </div>
         <div className="elevator--img-aside">
           <img
-            src="src/assets/images/imagem1.png"
+            src={img - aside}
             alt="Imagem de uma pessoa observando o portfólio de um artista"
             loading="lazy"
           />

@@ -149,7 +149,7 @@ export function Pix() {
               <div className="modal-overlay" onClick={closeQrCode}>
                 <div className="qr-code" onClick={handleModalContentClick}>
                   <div className="fechar" onClick={closeQrCode}>
-                    <img src={closeIcon} alt="Fechar" />{" "}
+                    <img src={closeIcon} alt="Fechar" loading="lazy" />{" "}
                     {/* Use a variável importada */}
                   </div>
                   <img
@@ -186,7 +186,7 @@ export function Pix() {
                   onClick={handleModalContentClick}
                 >
                   <div className="fechar" onClick={closeCopiaCola}>
-                    <img src={closeIcon} alt="Fechar" />{" "}
+                    <img src={closeIcon} alt="Fechar" loading="lazy" />{" "}
                     {/* Use a variável importada */}
                   </div>
                   <div
@@ -203,6 +203,7 @@ export function Pix() {
                           ? "Código copiado"
                           : "Clique para copiar o código Pix Copia e Cola"
                       }
+                      loading="lazy"
                     />
                   </div>
                   <div className="cod-copia">{pixCopiaColaCode}</div>
@@ -236,7 +237,7 @@ export function Pix() {
               <div className="modal-overlay" onClick={closeChavePix}>
                 <div className="chave-pix" onClick={handleModalContentClick}>
                   <div className="fechar" onClick={closeChavePix}>
-                    <img src={closeIcon} alt="Fechar" />{" "}
+                    <img src={closeIcon} alt="Fechar" loading="lazy" />{" "}
                     {/* Use a variável importada */}
                   </div>
                   <div
@@ -253,6 +254,7 @@ export function Pix() {
                           ? "Chave copiada"
                           : "Clique para copiar a chave Pix"
                       }
+                      loading="lazy"
                     />
                   </div>
                   <div className="key-pix">{pixChaveKey}</div>
