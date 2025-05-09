@@ -114,7 +114,7 @@ export function Cabecalho() {
                     {/* Use apenas "#SobreMim" como href para rolar na página atual */}
                     {/* Adiciona a lógica para fechar o menu ao clicar */}
                     <a
-                      href="/"
+                      href="/DigiGram/"
                       onClick={closeMenu} // Chame a função simplificada
                     >
                       Sobre Mim
