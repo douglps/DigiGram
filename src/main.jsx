@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
+// Mantenha a importação do BrowserRouter
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles/style.css";
 
@@ -13,11 +14,15 @@ const Contato = lazy(() => import("./pages/Contato.jsx"));
 const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
+    {/* Adicione o prop basename aqui, com o nome do seu repositório */}
+    <Router basename="/DigiGram/">
       <Suspense fallback={<div className="spinner"></div>}>
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/meuportifolio" element={<MeuPortifolio />} />
+          {/* Estas rotas agora são relativas ao basename "/DigiGram/" */}
+          <Route path="/" element={<App />} />{" "}
+          {/* Corresponderá a /DigiGram/ */}
+          <Route path="/meuportifolio" element={<MeuPortifolio />} />{" "}
+          {/* Corresponderá a /DigiGram/meuportifolio */}
           <Route path="/lab" element={<Lab />} />
           <Route path="/cafe" element={<Cafe />} />
           <Route path="/contato" element={<Contato />} />
