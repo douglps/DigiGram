@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="socials">
             <a href="#LinkedIn">
               <img
-                src="src/assets/images/socials/linkedin.svg"
+                src="../assets/images/socials/linkedin.svg"
                 alt="LinkedIn"
                 rel="noopener"
                 loading="lazy"
@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="socials">
             <a href="#Email">
               <img
-                src="src/assets/images/socials/email-br.svg"
+                src="../assets/images/socials/email-br.svg"
                 alt="E-mail"
                 loading="lazy"
               />{" "}
@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="socials">
             <a href="https://github.com/douglps" target="_blank">
               <img
-                src="src/assets/images/socials/github-br.svg"
+                src="../assets/images/socials/github-br.svg"
                 alt="Github DougLps"
                 rel="noopener"
                 loading="lazy"
@@ -47,7 +47,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <img
-                src="src/assets/images/utils/spotify.svg"
+                src="../assets/images/utils/spotify.svg"
                 alt="Playlist Spotify"
                 loading="lazy"
               />{" "}

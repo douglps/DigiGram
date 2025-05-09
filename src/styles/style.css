@@ -830,7 +830,7 @@ p {
 
 .portfolio {
   width: 100%;
-  background-image: url(src/assets/images/bg-vd-roxo-pr.png);
+  background-image: url(../assets/images/bg-vd-roxo-pr.png);
 }
 .portfolio--titulo {
   font-size: 2rem;
@@ -1877,7 +1877,7 @@ h3 {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url("src/assets/images/bg/cafezin.jpg");
+  background-image: url("../assets/images/bg/cafezin.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;

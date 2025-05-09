@@ -1,3 +1,5 @@
+import imgaside from "../assets/images/imagem1.png";
+
 export default function ElevatorPitch() {
   return (
     <section className="elevator-pitch">
@@ -13,7 +15,7 @@ export default function ElevatorPitch() {
         </div>
         <div className="elevator--img-aside">
           <img
-            src={img - aside}
+            src={imgaside}
             alt="Imagem de uma pessoa observando o portfólio de um artista"
             loading="lazy"
           />
