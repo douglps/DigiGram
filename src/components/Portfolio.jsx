@@ -1,17 +1,38 @@
+import React from "react";
+
+// Importe as imagens necessárias
+import thumbPortfolioImage from "../assets/images/compressed_images/thumb-portfolio-min.png"; // Caminho relativo de src/components/
+
+// Importe os ícones de skills
+import html5Icon from "../assets/images/skills/html5.svg";
+import cssIcon from "../assets/images/skills/css.svg";
+import sassIcon from "../assets/images/skills/sass.svg";
+import javascriptIcon from "../assets/images/skills/javascript.svg";
+import reactIcon from "../assets/images/skills/react.svg";
+import gitIcon from "../assets/images/skills/git.svg";
+import windowsIcon from "../assets/images/skills/windows.svg";
+import vscodeIcon from "../assets/images/skills/vs-code.svg";
+
 export default function Portfolio() {
   return (
     <section className="portfolio" id="Portifolio">
-      <div className="meu-portfolio" id="#portfolio">
-        Portifólio
-      </div>
+      {/* Removido o ID duplicado "#portfolio" - o primeiro div pode ter o ID "portfolio" se necessário, mas não deve ser "#portfolio" */}
+      {/* Considere usar um ID diferente aqui se precisar referenciar este div especificamente */}
+      {/* Se o texto "Portifólio" for o target, o ID deveria estar nele ou em um elemento pai próximo */}
+      <div className="meu-portfolio">Portifólio</div>
       <div className="container">
         <div className="overlay"></div>
-        <div className="grid grid--portfolio" id="portfolio">
+        {/* Removido o ID duplicado "portfolio" neste grid */}
+        <div className="grid grid--portfolio">
           <div className="portfolio--img">
-            <a href="">
+            {/* Ajuste o href se houver um link específico para este projeto */}
+            {/* Se o link não tiver destino, remova a tag <a> ou use href="#" como placeholder */}
+            <a href="#">
+              {" "}
+              {/* Exemplo com placeholder #, ajuste conforme necessário */}
               <img
-                src="src/assets/images/compressed_images/thumb-portfolio-min.png"
-                alt="Portifólio"
+                src={thumbPortfolioImage} // Use a variável importada
+                alt="Portifólio" // Considere um alt mais descritivo
               />
             </a>
           </div>
@@ -31,41 +52,47 @@ export default function Portfolio() {
               </div>
               <div className="grid__portfolio--skills">
                 <div className="skill-portfolio">
-                  <img src="src/assets/images/skills/html5.svg" alt="HTML5" />
+                  <img src={html5Icon} alt="HTML5" />{" "}
+                  {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
-                  <img src="src/assets/images/skills/css.svg" alt="CSS" />
+                  <img src={cssIcon} alt="CSS" />{" "}
+                  {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
-                  <img src="src/assets/images/skills/sass.svg" alt="SASS" />
+                  <img src={sassIcon} alt="SASS" />{" "}
+                  {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
                   <img
-                    src="src/assets/images/skills/javascript.svg"
+                    src={javascriptIcon} // Use a variável importada
                     alt="JavaScript"
                   />
                 </div>
                 <div className="skill-portfolio">
-                  <img src="src/assets/images/skills/react.svg" alt="React" />
+                  <img src={reactIcon} alt="React" />{" "}
+                  {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
-                  <img src="src/assets/images/skills/git.svg" alt="Git" />
+                  <img src={gitIcon} alt="Git" />{" "}
+                  {/* Use a variável importada */}
                 </div>
                 <div className="skill-portfolio">
                   <img
-                    src="src/assets/images/skills/windows.svg"
+                    src={windowsIcon} // Use a variável importada
                     alt="Windows"
                   />
                 </div>
                 <div className="skill-portfolio">
                   <img
-                    src="src/assets/images/skills/vs-code.svg"
+                    src={vscodeIcon} // Use a variável importada
                     alt="Visual Studio Code"
                   />
                 </div>
               </div>
             </div>
           </div>
+          {/* Este div parece estar vazio, ajuste seu layout CSS ou remova se não for necessário */}
           <div></div>
         </div>
       </div>

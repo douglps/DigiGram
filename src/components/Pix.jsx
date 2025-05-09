@@ -1,4 +1,14 @@
 import React, { useState } from "react";
+import { FormularioContato } from "./FormularioContato"; // Mantido, importação existente
+
+// Importe as imagens necessárias (todas parecem estar em src/assets/images/utils/)
+import logoPixIcon from "../assets/images/utils/logo_pix.png";
+import qrCodeIcon from "../assets/images/utils/qr-code.svg";
+import copiaColaIcon from "../assets/images/utils/copia-cola.svg";
+import keyIcon from "../assets/images/utils/key.svg";
+import closeIcon from "../assets/images/utils/close.svg";
+import qrPixNextImage from "../assets/images/utils/qrpix-next.jpeg";
+import copyIcon from "../assets/images/utils/copy.svg"; // Ícone de copiar
 
 export function Pix() {
   // Estado para gerenciar a visibilidade de cada modal
@@ -100,7 +110,7 @@ export function Pix() {
           <div className="dados-pix">
             <div className="pix-logo">
               <img
-                src="src/assets/images/utils/logo_pix.png"
+                src={logoPixIcon} // Use a variável importada
                 alt="Logo Pix"
                 loading="lazy"
               />
@@ -110,7 +120,7 @@ export function Pix() {
             <div className="qr" onClick={openQrCode}>
               <p>QR Code</p>
               <img
-                src="src/assets/images/utils/qr-code.svg"
+                src={qrCodeIcon} // Use a variável importada
                 alt="QR Code"
                 loading="lazy"
               />
@@ -119,7 +129,7 @@ export function Pix() {
             <div className="copia-cola" onClick={openCopiaCola}>
               <p>Copia e Cola</p>
               <img
-                src="src/assets/images/utils/copia-cola.svg"
+                src={copiaColaIcon} // Use a variável importada
                 alt="Copia e cola"
                 loading="lazy"
               />
@@ -128,7 +138,7 @@ export function Pix() {
             <div className="chave" onClick={openChavePix}>
               <p>Chave Pix</p>
               <img
-                src="src/assets/images/utils/key.svg"
+                src={keyIcon} // Use a variável importada
                 alt="Chave Pix"
                 loading="lazy"
               />
@@ -139,11 +149,12 @@ export function Pix() {
               <div className="modal-overlay" onClick={closeQrCode}>
                 <div className="qr-code" onClick={handleModalContentClick}>
                   <div className="fechar" onClick={closeQrCode}>
-                    <img src="src/assets/images/utils/close.svg" alt="Fechar" />
+                    <img src={closeIcon} alt="Fechar" />{" "}
+                    {/* Use a variável importada */}
                   </div>
                   <img
                     className="meu-qr"
-                    src="src/assets/images/utils/qrpix-next.jpeg"
+                    src={qrPixNextImage} // Use a variável importada
                     alt="QR Code Pix"
                     loading="lazy"
                   />{" "}
@@ -175,7 +186,8 @@ export function Pix() {
                   onClick={handleModalContentClick}
                 >
                   <div className="fechar" onClick={closeCopiaCola}>
-                    <img src="src/assets/images/utils/close.svg" alt="Fechar" />
+                    <img src={closeIcon} alt="Fechar" />{" "}
+                    {/* Use a variável importada */}
                   </div>
                   <div
                     className="copiar"
@@ -185,7 +197,7 @@ export function Pix() {
                   >
                     {copiaColaButtonText}{" "}
                     <img
-                      src="src/assets/images/utils/copy.svg"
+                      src={copyIcon} // Use a variável importada
                       alt={
                         copiaColaButtonText === "Copiado!"
                           ? "Código copiado"
@@ -224,7 +236,8 @@ export function Pix() {
               <div className="modal-overlay" onClick={closeChavePix}>
                 <div className="chave-pix" onClick={handleModalContentClick}>
                   <div className="fechar" onClick={closeChavePix}>
-                    <img src="src/assets/images/utils/close.svg" alt="Fechar" />
+                    <img src={closeIcon} alt="Fechar" />{" "}
+                    {/* Use a variável importada */}
                   </div>
                   <div
                     className="copiar"
@@ -234,7 +247,7 @@ export function Pix() {
                   >
                     {chavePixButtonText}{" "}
                     <img
-                      src="src/assets/images/utils/copy.svg"
+                      src={copyIcon} // Use a variável importada
                       alt={
                         chavePixButtonText === "Copiado!"
                           ? "Chave copiada"

@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 
+// Importe as imagens necessárias
+import avatarImage from "../assets/images/avatar.png"; // Caminho relativo de src/components/
+import codeImage from "../assets/images/compressed_images/code-3maior-que-min.png"; // Caminho relativo de src/components/
+
 export function Hero() {
   const [showMessage, setShowMessage] = useState(false);
   const [hideLoading, setHideLoading] = useState(false);
@@ -15,20 +19,22 @@ export function Hero() {
 
   return (
     <section className="hero" id="SobreMim">
-      <div id="Topo"></div>
+      {" "}
+      {/* Este é um ID de âncora */}
+      <div id="Topo"></div> {/* Este é um ID de âncora */}
       <div className="hero__container">
         <div className="dobra"></div>
         <div className="me__container">
           <div className="me__container--foto">
             <h1>Douglas Lopes</h1>
             <img
-              src="src/assets/images/avatar.png"
+              src={avatarImage} // Use a variável importada
               alt="Avatar de Douglas Lopes"
             />
             <div className="maior-que">
               <img
-                src="src/assets/images/compressed_images/code-3maior-que-min.png"
-                alt=""
+                src={codeImage} // Use a variável importada
+                alt="" // Considere adicionar um texto alternativo significativo ou alt="" se a imagem for puramente decorativa e redundante com o conteúdo adjacente.
               />
             </div>
           </div>

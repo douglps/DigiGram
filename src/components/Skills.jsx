@@ -1,10 +1,32 @@
-import React, { useState, useEffect } from "react"; // Importe useEffect
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Scrollbar, A11y } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+
+// Importe todos os ícones de skills individualmente
+import html5Icon from "../assets/images/skills/html5.svg"; // Caminho relativo de src/components/ para src/assets/images/skills/
+import cssIcon from "../assets/images/skills/css.svg";
+import javascriptIcon from "../assets/images/skills/javascript.svg";
+import reactIcon from "../assets/images/skills/react.svg";
+import tailwindIcon from "../assets/images/skills/tailwind.svg";
+import bootstrapIcon from "../assets/images/skills/bootstrap.svg";
+import pythonIcon from "../assets/images/skills/python.svg";
+import javaIcon from "../assets/images/skills/java-dark.svg";
+import nodejsIcon from "../assets/images/skills/nodejs.svg";
+import jsonIcon from "../assets/images/skills/json.svg";
+import figmaIcon from "../assets/images/skills/figma.svg";
+import canvaIcon from "../assets/images/skills/canva.svg";
+import kritaIcon from "../assets/images/skills/krita.svg";
+import gitIcon from "../assets/images/skills/git.svg";
+import githubIcon from "../assets/images/skills/github.svg";
+import windowsIcon from "../assets/images/skills/windows.svg";
+import npmIcon from "../assets/images/skills/npm.svg";
+import viteIcon from "../assets/images/skills/vite.svg";
+// Verifique a capitalização do arquivo .PNG
+import firebaseIcon from "../assets/images/skills/firebase.PNG"; // Certifique-se que o nome do arquivo e extensão correspondem exatamente
 
 export function Skills() {
   // Estado para controlar qual aba de conteúdo extra está aberta
@@ -61,100 +83,100 @@ export function Skills() {
   // --- Variável booleana para verificar se é tela pequena ---
   const isSmallScreen = windowWidth <= 480;
 
-  // --- Dados das skills (mantidos do seu código) ---
+  // --- Dados das skills (use as variáveis importadas) ---
   const skills = [
     // Front-end ************************************
     {
-      src: "src/assets/images/skills/html5.svg",
+      src: html5Icon, // Use a variável importada
       alt: "HTML 5",
       name: "HTML 5",
     },
-    { src: "src/assets/images/skills/css.svg", alt: "CSS 3", name: "CSS 3" },
+    { src: cssIcon, alt: "CSS 3", name: "CSS 3" }, // Use a variável importada
     {
-      src: "src/assets/images/skills/javascript.svg",
+      src: javascriptIcon, // Use a variável importada
       alt: "JavaScript",
       name: "JavaScript",
     },
     {
-      src: "src/assets/images/skills/react.svg",
+      src: reactIcon, // Use a variável importada
       alt: "React",
       name: "React",
     },
     {
-      src: "src/assets/images/skills/tailwind.svg",
+      src: tailwindIcon, // Use a variável importada
       alt: "Tailwind CSS",
       name: "Tailwind CSS",
     },
     {
-      src: "src/assets/images/skills/bootstrap.svg",
+      src: bootstrapIcon, // Use a variável importada
       alt: "Bootstrap",
       name: "Bootstrap",
     },
     // Back-end *********************************
     {
-      src: "src/assets/images/skills/python.svg",
+      src: pythonIcon, // Use a variável importada
       alt: "Python",
       name: "Python",
     },
     {
-      src: "src/assets/images/skills/java-dark.svg",
+      src: javaIcon, // Use a variável importada
       alt: "Java",
       name: "Java",
     },
     {
-      src: "src/assets/images/skills/nodejs.svg",
+      src: nodejsIcon, // Use a variável importada
       alt: "Node.Js",
       name: "Node.Js",
     },
     {
-      src: "src/assets/images/skills/json.svg",
+      src: jsonIcon, // Use a variável importada
       alt: "JSON",
       name: "JSON",
     },
     // UI/UX *********************************
     {
-      src: "src/assets/images/skills/figma.svg",
+      src: figmaIcon, // Use a variável importada
       alt: "Figma",
       name: "Figma",
     },
     {
-      src: "src/assets/images/skills/canva.svg",
+      src: canvaIcon, // Use a variável importada
       alt: "Canva",
       name: "Canva",
     },
     {
-      src: "src/assets/images/skills/krita.svg",
+      src: kritaIcon, // Use a variável importada
       alt: "Krita",
       name: "Krita",
     },
     // Ferramentas *********************************
     {
-      src: "src/assets/images/skills/git.svg",
+      src: gitIcon, // Use a variável importada
       alt: "Git",
       name: "Git",
     },
     {
-      src: "src/assets/images/skills/github.svg",
+      src: githubIcon, // Use a variável importada
       alt: "GitHub",
       name: "GitHub",
     },
     {
-      src: "src/assets/images/skills/windows.svg",
+      src: windowsIcon, // Use a variável importada
       alt: "Windows",
       name: "Windows",
     },
     {
-      src: "src/assets/images/skills/npm.svg",
+      src: npmIcon, // Use a variável importada
       alt: "npm",
       name: "npm",
     },
     {
-      src: "src/assets/images/skills/vite.svg",
+      src: viteIcon, // Use a variável importada
       alt: "Vite",
       name: "Vite",
     },
     {
-      src: "src/assets/images/skills/firebase.PNG",
+      src: firebaseIcon, // Use a variável importada
       alt: "Firebase",
       name: "Firebase",
     },
@@ -162,6 +184,8 @@ export function Skills() {
 
   return (
     <section className="skills" id="Skills">
+      {" "}
+      {/* Este é um ID de âncora */}
       <div className="abas__container">
         {/* Aplicando renderização condicional para o texto */}
         <div
@@ -189,7 +213,6 @@ export function Skills() {
           {isSmallScreen ? abasTextContent[4].short : abasTextContent[4].long}
         </div>
       </div>
-
       {/* Conteúdo extra das abas (mantido) */}
       <div
         className={`abas-more collapsible ${openDiv === 1 ? "is-open" : ""}`}
@@ -253,7 +276,6 @@ export function Skills() {
           <br />- Sun Tzu
         </div>
       </div>
-
       {/* Container do Swiper (mantido) */}
       <div className="skills__container">
         <Swiper
@@ -296,7 +318,7 @@ export function Skills() {
                     <div className="skills-icon--fundo">
                       <img
                         className="skills-icon"
-                        src={skill.src}
+                        src={skill.src} // Aqui já usa skill.src, que agora será a variável importada
                         alt={skill.alt}
                         loading="lazy"
                       />

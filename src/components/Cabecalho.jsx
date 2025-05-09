@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+// Importe Link do react-router-dom
 import { Link } from "react-router-dom";
 // Removido: import { useLazyLoad } from "./LazyLoadContext";
+
+// Importe a imagem do logotipo
+import logoImage from "../assets/images/logo_bgoff_pq.png"; // Ajuste o caminho se o arquivo Cabecalho.jsx não estiver na mesma pasta que assets
 
 export function Cabecalho() {
   // Removido: const { lazyLoadAndScrollTo } = useLazyLoad();
@@ -30,6 +34,13 @@ export function Cabecalho() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Função para fechar o menu (usada em links clicáveis no mobile)
+  const closeMenu = () => {
+    if (isMobile && isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
   // --- Efeito para fechar o menu no scroll (Mantido) ---
   useEffect(() => {
     const handleScroll = () => {
@@ -57,9 +68,12 @@ export function Cabecalho() {
       <div className="cabecalho">
         <div className="navegacao">
           <div className="cabecalho__logo--img">
-            <a href="/">
-              <img src="src/assets/images/logo_bgoff_pq.png" alt="Logotipo" />
-            </a>
+            {/* Use Link para navegar para a rota raiz "/" */}
+            {/* Ao clicar, feche o menu mobile se estiver aberto */}
+            <Link to="/" onClick={closeMenu}>
+              {/* Use a variável importada para o src da imagem */}
+              <img src={logoImage} alt="Logotipo" />
+            </Link>
           </div>
 
           {/* Renderiza o menu hambúrguer APENAS em telas pequenas */}
@@ -97,42 +111,44 @@ export function Cabecalho() {
                 <ul className="menu-up">
                   <li>
                     {/* Link interno para ID - Usará scroll nativo do navegador */}
+                    {/* Use apenas "#SobreMim" como href para rolar na página atual */}
                     {/* Adiciona a lógica para fechar o menu ao clicar */}
                     <a
-                      href="/#SobreMim"
-                      onClick={() => {
-                        if (isMobile && isMenuOpen) {
-                          setIsMenuOpen(false);
-                        }
-                      }}
+                      href="#SobreMim"
+                      onClick={closeMenu} // Chame a função simplificada
                     >
                       Sobre Mim
                     </a>
                   </li>
                   <li>
-                    {/* Link interno para ID - Usará scroll nativo do navegador */}
-                    {/* Adiciona a lógica para fechar o menu ao clicar */}
-                    <a href="/meuportifolio">Portifólio</a>
+                    {/* Mude para Link para navegar para a rota /meuportifolio */}
+                    {/* Ao clicar, feche o menu mobile se estiver aberto */}
+                    <Link to="/meuportifolio" onClick={closeMenu}>
+                      {" "}
+                      {/* Chame a função simplificada */}
+                      Portifólio
+                    </Link>
                   </li>
                   <li>
-                    {/* Link para rotas internas do React Router */}
+                    {/* Este já estava correto com Link */}
                     {/* Ao clicar, feche o menu mobile se estiver aberto */}
                     <Link
                       to="/lab"
-                      onClick={() => {
-                        if (isMobile && isMenuOpen) {
-                          setIsMenuOpen(false);
-                        }
-                      }}
+                      onClick={closeMenu} // Chame a função simplificada
                       className="nav-link" // Adicione uma classe para estilizar como link de navegação
                     >
                       LAB
                     </Link>
                   </li>
                   <li>
-                    {/* Link interno para ID - Usará scroll nativo do navegador */}
-                    {/* Adiciona a lógica para fechar o menu ao clicar */}
-                    <a href="/Contato">Contato</a>
+                    {/* Mude para Link para navegar para a rota /contato */}
+                    {/* Ao clicar, feche o menu mobile se estiver aberto */}
+                    {/* Certifique-se de que a rota em main.jsx é "/contato" com 'c' minúsculo */}
+                    <Link to="/contato" onClick={closeMenu}>
+                      {" "}
+                      {/* Chame a função simplificada */}
+                      Contato
+                    </Link>
                   </li>
                 </ul>
               </nav>
