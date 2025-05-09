@@ -26,7 +26,9 @@ export default function Portfolio() {
               funcional, responsivo e alinhado com meu estilo profissional.
             </p>
             <div className="container__skills">
-              <div className="cabecalho__skills">Tecnologias Utilizadas:</div>
+              <div className="cabecalho__skills">
+                Principais Tecnologias Utilizadas:
+              </div>
               <div className="grid__portfolio--skills">
                 <div className="skill-portfolio">
                   <img src="src/assets/images/skills/html5.svg" alt="HTML5" />
@@ -45,6 +47,21 @@ export default function Portfolio() {
                 </div>
                 <div className="skill-portfolio">
                   <img src="src/assets/images/skills/react.svg" alt="React" />
+                </div>
+                <div className="skill-portfolio">
+                  <img src="src/assets/images/skills/git.svg" alt="Git" />
+                </div>
+                <div className="skill-portfolio">
+                  <img
+                    src="src/assets/images/skills/windows.svg"
+                    alt="Windows"
+                  />
+                </div>
+                <div className="skill-portfolio">
+                  <img
+                    src="src/assets/images/skills/vs-code.svg"
+                    alt="Visual Studio Code"
+                  />
                 </div>
               </div>
             </div>

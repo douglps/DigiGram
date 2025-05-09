@@ -14,35 +14,34 @@
   background-image: linear-gradient(135deg, #ff84009e 0%, transparent 50%);
   z-index: -1;
 }
-.hero {
-  .me__container {
-    @include caixa-flex--center;
-    position: relative;
-    align-content: flex-start;
-    margin: 6rem 0 0 4rem;
-    min-width: 10rem;
-    max-width: 30rem;
-    &--foto {
-      text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
-      margin-left: 3.5rem;
-      padding: 0 2rem;
-    }
-  }
-
-  .dev {
-    font-size: 1.8rem;
+.me__container {
+  @include caixa-flex--center;
+  position: relative;
+  align-content: flex-start;
+  margin: 6rem 0 0 4rem;
+  min-width: 10rem;
+  max-width: 30rem;
+  &--foto {
     text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
-    padding: 0 1.8rem 0 1.8rem;
     margin-left: 3.5rem;
+    padding: 0 2rem;
   }
+}
 
-  .maior-que {
-    position: absolute;
-    width: 8rem;
-    bottom: 8rem;
-    right: -2rem;
-  }
+.dev {
+  font-size: 1.8rem;
+  text-shadow: #2d2d36 0.2rem 0.2rem 1rem;
+  padding: 0 1.8rem 0 1.8rem;
+  margin-left: 3.5rem;
+}
 
+.maior-que {
+  position: absolute;
+  width: 8rem;
+  bottom: 8rem;
+  right: -2rem;
+}
+.hero {
   &__container {
     border-radius: 0.4rem;
     display: flex;
@@ -120,7 +119,6 @@
   width: 100%;
   justify-content: space-evenly;
   font-weight: 300;
-
   cursor: pointer;
   &--back,
   &--front,
@@ -128,11 +126,10 @@
   &--ferramentas {
     @include fundo-transparente--br;
     border-radius: 2rem 2rem 0 0;
-    padding: 1.5rem 3rem;
+    padding: 10px 15px;
   }
   & div {
     /* Estilo básico para as abas clicáveis */
-    padding: 10px 15px;
     cursor: pointer;
     border: 1px solid $cor-roxa-secundaria;
     border-bottom: none; /* Para simular abas */
@@ -288,6 +285,10 @@
     @include caixa-flex--center;
     position: relative;
     font-size: 4rem;
+    height: 12rem;
+    width: 99.9%;
+    overflow: hidden;
+    transform: translateY(-20px);
   }
   &__span {
     font-weight: 600;
@@ -301,7 +302,7 @@
       @include caixa-flex--center;
       position: absolute;
       background-color: #ff8400;
-      top: 0rem;
+      top: 2rem;
       left: 0rem;
       width: 100%;
       height: 6rem;
@@ -310,9 +311,8 @@
     &--2 {
       @include caixa-flex--center;
       position: absolute;
-
       background-color: #6811f0;
-      top: 2rem;
+      top: 4rem;
       left: 0rem;
       width: 100%;
       height: 4rem;
@@ -323,7 +323,7 @@
       position: absolute;
 
       background-color: #40704a;
-      top: 0rem;
+      top: 3rem;
       left: 0rem;
       width: 100%;
       height: 6rem;
@@ -333,7 +333,7 @@
       @include caixa-flex--center;
       position: absolute;
       font-size: 2rem;
-      top: -0.5rem;
+      top: 2.5rem;
       left: 0rem;
       width: 100%;
       z-index: 50;
@@ -365,7 +365,7 @@
     height: 40rem;
     box-shadow: 0.5rem 0.5rem 1rem 0.1rem #ff84006b;
     overflow: hidden;
-    transform: translateY(6rem);
+    transform: translateY(-6rem);
     z-index: -1;
 
     & img {
@@ -375,9 +375,16 @@
       transform: translate(0%, 0%);
     }
   }
+  &-pitch__container--text {
+    margin-top: -14rem;
+  }
 }
 
 // FOOTER **********************************************************
+#Footer {
+  width: 100%;
+}
+
 .footer {
   @include caixa-flex--center;
   width: 100%;
@@ -458,17 +465,297 @@
 }
 // ------------------------------------------------------
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+// PIX **************************************************
+// ... outros estilos omitidos ...
 
-.fade-in.appear {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#Footer {
+.pix {
   width: 100%;
+  height: auto;
+}
+
+.container--pix {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  @include fundo-transparente--br; // Assumindo que este mixin define estilos como fundo transparente
+  width: 100%;
+  height: 100%; // Pode ser 'auto' dependendo do conteúdo, mas 100% aqui pode não ser o ideal se o conteúdo for curto e você quer o fundo cobrindo
+  top: 0;
+  left: 0;
+  background-image: url("src/assets/images/bg/cafezin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; // Ou 'cover', dependendo do efeito desejado
+  background-position: right;
+  padding: 3rem;
+}
+
+.fundo-pix {
+  background-color: #000000cc;
+  // Adicione padding ou ajuste layout para garantir que o conteúdo interno não toque nas bordas do fundo
+  padding: 2rem; // Exemplo
+}
+
+.quero-cafe {
+  @include caixa-flex--center; // Assumindo que este mixin define display: flex, justify-content: center, align-items: center
+  flex-direction: column;
+  text-align: justify;
+  padding: 2rem;
+  & p {
+    text-indent: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    // Ajuste a largura máxima ou use flexbox para controlar o tamanho do parágrafo
+    max-width: 800px; // Exemplo para evitar linhas muito longas
+    margin: 1rem 0;
+  }
+}
+
+.aviso-pix {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  // Ajuste padding ou margin conforme necessário
+  padding: 0 3rem 3rem; // Exemplo
+  & p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: start;
+    padding-left: 1rem;
+  }
+}
+
+.dados-pix {
+  @include caixa-flex--center;
+  position: relative; // Mantido caso algum elemento interno precise de position: absolute/relative em relação a ele
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3rem;
+  column-gap: 4rem;
+  // Considere adicionar row-gap também se o flex-wrap for usado
+  row-gap: 3rem; // Exemplo
+}
+
+.qr,
+.copia-cola,
+.chave {
+  @include caixa-flex--center;
+  width: 18rem; // Considere usar max-width e padding para melhor responsividade
+  height: auto;
+  background-color: #000000;
+  padding: 2rem;
+  border: 0.1rem solid $cor-verde-primaria;
+  border-radius: 0.5rem;
+  cursor: pointer; // Adiciona feedback visual de que é clicável
+  transition: transform 0.3s ease; // Efeito de hover
+  &:hover {
+    transform: translateY(-5px); // Exemplo de efeito
+  }
+}
+
+.meu-qr {
+  margin-right: 3rem;
+  max-width: 250px; // Limita o tamanho da imagem em telas maiores
+  height: auto;
+}
+
+.cod-copia {
+  display: flex;
+  word-break: break-all; // Mantido, mas word-wrap: break-word pode ser preferível
+  word-wrap: break-word; // Melhor para quebra de linha em longas strings
+  flex-direction: column;
+  min-width: 250px;
+  max-width: 300px; // Ajustado para permitir um pouco mais de largura
+  margin-right: 3rem; // Considere usar gap no flex container pai ou margin-right: auto no elemento anterior
+  color: black;
+  background-color: white;
+  height: 250px; // Altura fixa pode não ser ideal, considere min-height ou padding
+  align-items: center;
+  // align-content: space-between; // align-content só tem efeito em containers flex-wrap
+  justify-content: space-between; // Distribui espaço verticalmente
+  padding: 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem; // Adiciona bordas arredondadas para combinar
+}
+
+.key-pix {
+  display: flex;
+  word-break: break-all; // Mantido
+  word-wrap: break-word; // Adicionado
+  flex-direction: column;
+  min-width: 25rem; // Considere usar px ou rem consistentes, e talvez max-width
+  max-width: 30rem; // Ajustado
+  margin-right: 3rem; // Considere usar gap ou margin-right: auto
+  color: black;
+  background-color: white;
+  height: 250px; // Altura fixa pode não ser ideal
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  border-radius: 0.5rem; // Adicionado
+}
+
+.copiar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%; // Melhor usar 100% e padding no pai se necessário
+  height: auto;
+  align-items: center;
+  border: $cor-verde-primaria 0.1rem solid;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer; // Indica que é clicável para copiar
+  background-color: rgb(110, 110, 110); // Exemplo de fundo para destacar
+  font-weight: 700;
+  & img {
+    width: 3rem;
+    margin-left: 1rem; // Adiciona espaço entre o texto e a imagem
+  }
+}
+
+// --- NOVOS ESTILOS PARA O MODAL OVERLAY E CONTEÚDO ---
+.modal-overlay {
+  position: fixed; // Fixa o overlay na tela
+  top: 6.5rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.8); // Fundo semi-transparente escuro
+  display: flex; // Usa flexbox para centralizar o conteúdo
+  justify-content: center; // Centraliza horizontalmente
+  align-items: center; // Centraliza verticalmente
+  z-index: 999; // Garante que o modal fique acima de outros elementos
+  overflow-y: auto; // Adiciona scroll se o conteúdo for maior que a tela
+  padding: 7rem; // Adiciona padding para evitar que o conteúdo toque as bordas em telas pequenas
+}
+
+.qr-code,
+.pix-copia-cola,
+.chave-pix {
+  @include caixa-flex--center;
+  position: relative; // Necessário para posicionar o botão de fechar
+  flex-direction: row;
+  flex-wrap: wrap; // Permite quebra de linha em telas menores
+  align-items: center;
+  width: 98%; // Ocupa quase toda a largura em telas pequenas
+  max-width: 800px; // Limita a largura em telas grandes (ajuste conforme necessário)
+  height: auto;
+  background-color: #000000;
+  padding: 3rem; // Aumenta o padding interno
+  border: 0.1rem solid $cor-verde-primaria;
+  border-radius: 0.5rem;
+  gap: 3rem;
+  // Adicione box-shadow para destacar o modal
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.fechar {
+  @include caixa-flex--center;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  // Posiciona o botão no canto superior direito
+  right: -1.5rem; // Ajuste conforme necessário
+  top: -1.5rem; // Ajuste conforme necessário
+  background-color: $cor-verde-primaria; // Cor de fundo para o botão
+  border-radius: 50%; // Transforma em círculo
+  cursor: pointer;
+  z-index: 999; // Garante que o botão de fechar esteja acima do conteúdo do modal
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: darken($cor-verde-primaria, 10%); // Escurece no hover
+  }
+  & img {
+    width: 2.5rem; // Ajusta o tamanho da imagem do X
+    height: 2.5rem;
+    z-index: 999;
+  }
+}
+
+.passo-qr {
+  display: flex;
+  flex-direction: column; // Empilha os passos e dados verticalmente
+  text-align: left;
+  // align-items: center; // Removido, queremos align-items: flex-start ou stretch para texto
+  align-items: flex-start;
+  gap: 2rem; // Reduzido o gap entre os blocos de passos e dados
+  & ol {
+    padding-left: 1.5rem; // Adiciona padding para os marcadores da lista
+    & li {
+      margin-bottom: 0.5rem; // Espaço entre itens da lista
+    }
+  }
+}
+.dados-qr {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.pix-logo {
+  width: 25rem;
+  padding: 3rem;
+  @include fundo-transparente--br;
+  // Pode ser necessário ajustar margens ou usar flexbox/grid no pai (.aviso-pix) para posicionamento
+}
+
+// Adicione media queries para ajustar tamanhos e espaçamentos em telas menores
+@media (max-width: 768px) {
+  .quero-cafe,
+  .aviso-pix,
+  .dados-pix {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem; // Espaço entre itens em coluna
+  }
+
+  .quero-cafe p {
+    text-indent: 1rem;
+    max-width: 100%; // Ocupa a largura total
+  }
+
+  .aviso-pix {
+    text-align: center; // Centraliza o texto em telas menores
+  }
+
+  .dados-pix {
+    column-gap: 2rem; // Reduz o gap entre os botões
+    row-gap: 2rem;
+  }
+
+  .qr,
+  .copia-cola,
+  .chave {
+    width: 60%;
+    max-width: 25rem;
+  }
+
+  .qr-code,
+  .pix-copia-cola,
+  .chave-pix {
+    flex-direction: column; // Empilha conteúdo do modal em telas pequenas
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .meu-qr,
+  .cod-copia,
+  .key-pix {
+    margin-right: 0; // Remove margem lateral
+    max-width: 100%; // Ocupa largura total no modal
+    width: 100%;
+    height: auto; // Altura automática
+    min-width: unset; // Remove min-width
+  }
+
+  .copiar {
+    width: 100%; // Ocupa largura total no modal
+  }
+
+  .passo-qr {
+    gap: 1.5rem; // Reduz gap
+  }
 }

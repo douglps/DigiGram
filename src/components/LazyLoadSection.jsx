@@ -66,7 +66,7 @@ export const LazyLoadSection = ({
           }}
         >
           {/* Opcional: Mostrar um indicador leve ou apenas um espaço em branco */}
-          Loading area for {sectionId}...
+          <Spinner /> {sectionId}...
         </div>
       )}
     </section>

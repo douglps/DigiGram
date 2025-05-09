@@ -101,6 +101,7 @@
   @include caixa-flex--center;
   @include fundo-transparente--pr;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .skill-portfolio {
@@ -113,4 +114,8 @@
 .img-aleatoria {
   grid-column: 3 / span 3;
   grid-row: 1 / span 2;
+}
+
+.meuport {
+  margin-top: 6.5rem;
 }

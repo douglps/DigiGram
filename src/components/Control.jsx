@@ -66,11 +66,13 @@ export function Control() {
           </a>
         </div>
         <div className="cafe">
-          <img
-            src="src/assets/images/coffeebr.svg"
-            alt="Contribua com um café"
-            title="Contribua com um café"
-          />
+          <a href="/cafe">
+            <img
+              src="src/assets/images/coffeebr.svg"
+              alt="Contribua com um café"
+              title="Contribua com um café"
+            />
+          </a>
         </div>
         <div className="chat">
           <img
@@ -82,7 +84,7 @@ export function Control() {
       </div>
       {/* Este botão não faz parte do menu animado */}
       <div className="acima">
-        <a href="#SobreMim">
+        <a href="#Topo">
           <img
             src="src/assets/images/utils/up.svg"
             alt="Topo da página"

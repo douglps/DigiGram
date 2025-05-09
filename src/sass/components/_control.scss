@@ -15,7 +15,7 @@
     // O gap define o espaçamento quando os elementos estão visíveis
     gap: 2rem;
     padding: 1.5rem 0;
-    z-index: 999;
+    z-index: 500;
     // REMOVA a transição para a propriedade 'right', o container não desliza
     // transition: right 0.5s ease-in-out;
 
@@ -151,18 +151,17 @@
       }
     }
   }
-
-  // Estilos existentes para o botão "acima"
-  .acima {
-    @include caixa-flex--center;
-    background: #ffffff;
-    position: fixed;
-    width: 3rem;
-    height: 3rem;
-    bottom: -2rem;
-    right: 12rem;
-    margin: 1rem;
-    z-index: 999;
-    border-radius: 0.4rem;
-  }
+}
+// Estilos existentes para o botão "acima"
+.acima {
+  @include caixa-flex--center;
+  background: #ffffff;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  bottom: -2rem;
+  right: 12rem;
+  margin: 1rem;
+  z-index: 999;
+  border-radius: 0.4rem;
 }

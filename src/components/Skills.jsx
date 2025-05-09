@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // Importe useEffect
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Scrollbar, A11y } from "swiper/modules";
 // Import Swiper styles
@@ -7,7 +7,25 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 
 export function Skills() {
+  // Estado para controlar qual aba de conteúdo extra está aberta
   const [openDiv, setOpenDiv] = useState(null);
+
+  // --- Lógica para detectar o tamanho da janela ---
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    // Função de limpeza para remover o listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Executa apenas na montagem e desmontagem
+
+  // --- Lógica para os botões das abas ---
   const handleButtonClick = (divName) => {
     if (openDiv === divName) {
       setOpenDiv(null);
@@ -15,6 +33,35 @@ export function Skills() {
       setOpenDiv(divName);
     }
   };
+
+  // --- Textos das abas (longo e curto) ---
+  const abasTextContent = {
+    1: {
+      // BACK-END
+      long: "BACK-END",
+      short: "BACK", // Texto curto para telas pequenas
+    },
+    2: {
+      // FRONT-END
+      long: "FRONT-END",
+      short: "FRONT", // Texto curto
+    },
+    3: {
+      // UI/UX - DESIGN
+      long: "UI/UX - DESIGN",
+      short: "DESIGN", // Texto curto
+    },
+    4: {
+      // FERRAMENTAS
+      long: "FERRAMENTAS",
+      short: "FERRAM.", // Texto curto
+    },
+  };
+
+  // --- Variável booleana para verificar se é tela pequena ---
+  const isSmallScreen = windowWidth <= 480;
+
+  // --- Dados das skills (mantidos do seu código) ---
   const skills = [
     // Front-end ************************************
     {
@@ -116,31 +163,34 @@ export function Skills() {
   return (
     <section className="skills" id="Skills">
       <div className="abas__container">
+        {/* Aplicando renderização condicional para o texto */}
         <div
           className="abas__container--back"
           onClick={() => handleButtonClick(1)}
         >
-          BACK-END
+          {isSmallScreen ? abasTextContent[1].short : abasTextContent[1].long}
         </div>
         <div
           className="abas__container--front"
           onClick={() => handleButtonClick(2)}
         >
-          FRONT-END
+          {isSmallScreen ? abasTextContent[2].short : abasTextContent[2].long}
         </div>
         <div
           className="abas__container--ux_ui"
           onClick={() => handleButtonClick(3)}
         >
-          UI/UX - DESIGN
+          {isSmallScreen ? abasTextContent[3].short : abasTextContent[3].long}
         </div>
         <div
           className="abas__container--ferramentas"
           onClick={() => handleButtonClick(4)}
         >
-          FERRAMENTAS
+          {isSmallScreen ? abasTextContent[4].short : abasTextContent[4].long}
         </div>
       </div>
+
+      {/* Conteúdo extra das abas (mantido) */}
       <div
         className={`abas-more collapsible ${openDiv === 1 ? "is-open" : ""}`}
       >
@@ -203,20 +253,41 @@ export function Skills() {
           <br />- Sun Tzu
         </div>
       </div>
+
+      {/* Container do Swiper (mantido) */}
       <div className="skills__container">
         <Swiper
           modules={[Autoplay, Navigation, Scrollbar, A11y]}
-          spaceBetween={130}
+          spaceBetween={40}
           slidesPerView={6}
           navigation
           scrollbar={{ draggable: true }}
-          // onSwiper={(swiper) => console.log(swiper)}
-          // onSlideChange={() => console.log("slide change")}
           loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: true }}
           className="skills-swiper"
+          breakpoints={{
+            // when window width is >= 0px
+            300: {
+              slidesPerView: 3,
+              spaceBetween: 80,
+            },
+            481: {
+              // Note: Este breakpoint começa em 481px, então 480px cairá no breakpoint anterior (320px)
+              slidesPerView: 4,
+              spaceBetween: 120,
+            },
+            // when window width is >= 768px (example breakpoint)
+            768: {
+              slidesPerView: 6,
+              spaceBetween: 80,
+            },
+            1024: {
+              slidesPerView: 8,
+              spaceBetween: 60,
+            },
+          }}
         >
-          {/* Front-end Container */}
+          {/* Slides do Swiper */}
           {skills.map((skill, index) => (
             <SwiperSlide key={index}>
               <div className="skills__container--content">

@@ -9,19 +9,19 @@
       @content;
     }
   } @else if $tamanho == "md" {
-    @media (min-width: 30.0625em) and (max-width: 48em) {
+    @media (min-width: 30.001em) and (max-width: 48em) {
       @content;
     }
   } @else if $tamanho == "lg" {
-    @media (min-width: 48.0625em) and (max-width: 64em) {
+    @media (min-width: 48.01em) and (max-width: 64em) {
       @content;
     }
   } @else if $tamanho == "xl" {
-    @media (min-width: 64.0625em) and (max-width: 75em) {
+    @media (min-width: 64.01em) and (max-width: 75em) {
       @content;
     }
   } @else if $tamanho == "xxl" {
-    @media (min-width: 75.0625em) {
+    @media (min-width: 75.01em) {
       @content;
     }
   }

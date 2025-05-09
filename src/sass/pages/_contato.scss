@@ -1,0 +1,34 @@
+@import "../abstracts/variables.scss";
+
+.contato {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 6.5rem;
+}
+
+.maps {
+  width: auto;
+  height: auto;
+}
+
+.div-form {
+  margin: 2rem;
+}
+
+.socials-contato {
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.formcontato {
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 25rem;
+  width: 25rem;
+  border: 0.1rem $cor-verde-primaria solid;
+}

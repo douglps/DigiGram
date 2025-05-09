@@ -5,6 +5,7 @@ import { Hero } from "./components/Hero";
 import { Skills } from "./components/Skills";
 import "./styles/style.css";
 import { Terminal } from "./components/Terminal";
+
 import { LazyLoadProvider } from "./components/LazyLoadContext";
 import { LazyLoadSection } from "./components/LazyLoadSection";
 

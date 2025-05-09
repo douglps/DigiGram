@@ -15,6 +15,7 @@ export function Hero() {
 
   return (
     <section className="hero" id="SobreMim">
+      <div id="Topo"></div>
       <div className="hero__container">
         <div className="dobra"></div>
         <div className="me__container">
